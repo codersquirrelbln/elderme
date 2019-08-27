@@ -1,4 +1,5 @@
-#class UsersController < ApplicationController
+class UsersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 #  def new
 #    @user = User.new
 #    if user.save
@@ -9,22 +10,21 @@
 #    end
 #  end#
 
-#  def show
-#    @user = User.find(params[:id])
-#  end#
+ def show
+   @user = User.find(params[:id])
+ end
 
 #  def index
 #    @users = User.all
 #  end#
 
-  def destroy
-    @user = User.find(params[:id])
-  end
+  # def destroy
+  #   @user = User.find(params[:id])
+  # end
 
 #  def edit
 #    @user = User.find.(params[:id])
 #   end#
-
 
 #  def update
 #  @user = User.find(params[:id])
@@ -46,4 +46,4 @@
 #  def users_params
 #     params.require(:user).permit(:first_name, :last_name, :location, :city, :gender, :phone_number, :age, :mobility, :biography, :email)
 #   end
-#end
+end
