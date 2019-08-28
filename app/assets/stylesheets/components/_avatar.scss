@@ -18,3 +18,63 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.card-user {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 500px;
+  width : 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h1{
+  text-align: center;
+}
+
+.card-user > img {
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-cell;
+  vertical-align: middle
+}
+
+.card-user h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-user .card-user-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-user-info  {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.interest-wrapper {
+  height: 500px;
+  width :500px;
+}
+
+.interest-wrapper {
+ display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 50px 50px; /*Make the grid smaller than the container*/
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
