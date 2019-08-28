@@ -17,6 +17,10 @@
 </div>
 
 <div>
+  <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary'%>
+</div>
+
+<div>
   <% @user.interests.each do |interest| %>
     <%= interest.title %>
   <% end %>
