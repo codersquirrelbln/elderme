@@ -21,7 +21,7 @@ class RequestsController < ApplicationController
     @request.volunteer = @user
     if @request.save
       # redirect_to user_path(@user)
-      redirect_to users_path
+      redirect_to user_requests_path
     else
       render :new
     end

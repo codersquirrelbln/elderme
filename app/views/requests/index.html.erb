@@ -1,0 +1,19 @@
+<h1>All my Requests</h1>
+
+<!-- iterate through all requests -->
+
+<div>
+  <% @requests.each do |request| %>
+  <%= request.date %>
+  <%= request.start_time %>
+  <%= request.end_time %>
+  <%= request.meeting_point %>
+  <%= request.event_kind %>
+  <%= request.status %>
+  <%= request.topic %>
+  <%= request.message %>
+  <!-- #request.senior_id -->
+  <%= request.volunteer_id %>
+  <% end %>
+</div>
+<!-- display calendar with corresponding requests in it -->
