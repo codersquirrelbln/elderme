@@ -8,8 +8,11 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(requests_params)
     @user = User.find(params[:user_id])
+    @request.senior = current_user
+    @request.volunteer = @user
     if @request.save
-      redirect_to user_path(@user)
+      # redirect_to user_path(@user)
+      redirect_to users_path
     else
       render :new
     end
@@ -25,6 +28,6 @@ class RequestsController < ApplicationController
   private
 
   def requests_params
-    params.require(:request).permit(:user_id, :name, :photo)
+    params.require(:request).permit(:date, :start_time, :meeting_point, :message)
   end
 end
