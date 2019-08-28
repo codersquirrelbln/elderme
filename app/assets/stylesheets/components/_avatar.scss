@@ -23,7 +23,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 500px;
+  height: 600px;
   width : 500px;
   margin-left: auto;
   margin-right: auto;
@@ -44,13 +44,7 @@
   vertical-align: middle
 }
 
-.card-user h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-user .card-user-info {
+.card-user .card-user-info{
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -77,4 +71,5 @@
   grid-gap: 10px;
   background-color: #2196F3;
   padding: 10px;
+  height: 600px;
 }
