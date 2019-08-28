@@ -5,6 +5,12 @@
   <div container_up>
 
   <div class="form-inputs">
+
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :age %>
+    <%= f.input :gender %>
+
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -24,7 +30,7 @@
                 input_html: { autocomplete: "current-password" } %>
 
 
-  </div>
+
 
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
@@ -37,3 +43,4 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
