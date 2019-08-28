@@ -1,5 +1,14 @@
 class RequestsController < ApplicationController
    # skip_before_action :authenticate_user!, only: [:new, :create, :index, :show]
+
+  def index
+    @requests = Request.all
+  end
+
+  def show
+    @request = Request.find(params[:id])
+  end
+
   def new
     @request = Request.new
     @user = User.find(params[:user_id])
@@ -12,7 +21,7 @@ class RequestsController < ApplicationController
     @request.volunteer = @user
     if @request.save
       # redirect_to user_path(@user)
-      redirect_to users_path
+      redirect_to user_requests_path
     else
       render :new
     end
