@@ -1,4 +1,4 @@
-#class UsersController < ApplicationController
+class UsersController < ApplicationController
 #  def new
 #    @user = User.new
 #    if user.save
@@ -45,4 +45,4 @@
 #  def users_params
 #     params.require(:user).permit(:first_name, :last_name, :location, :city, :gender, :phone_number, :age, :mobility, :biography, :email)
 #   end
-#end
+end
