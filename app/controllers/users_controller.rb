@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 #  @user = User.find(params[:id])
 #  if  @user.update(user_params)
 #  redirect_to user_path(@user)
-#end#
+# end#
 
 #  def create
 #    @user = User.new(params[:user])

@@ -1,1 +1,23 @@
 <h1>this is the show page for the user</h1>
+
+
+<!-- show all non sensitive info about user-->
+
+<div>
+  <ul>
+    <li><%= @user.email %></li>
+    <li><%= @user.first_name %></li>
+    <li><%= @user.last_name %></li>
+    <li><%= @user.city %></li>
+    <li><%= @user.gender %></li>
+    <li><%= @user.age %></li>
+    <li><%= @user.mobility %></li>
+    <li><%= @user.biography %></li>
+  </ul>
+</div>
+
+<div>
+  <% @user.interests.each do |interest| %>
+    <%= interest.title %>
+  <% end %>
+</div>
