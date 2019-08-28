@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+
+.banner-img img {
+  height: 500px;
+}
+
+.container-landing {
+  vertical-align: middle;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+
+}
