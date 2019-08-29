@@ -6,8 +6,8 @@
   padding: 10px;
   text-align: center;
   background-repeat: no-repeat !important;
-  height:400px;
-  width:250px;
+  height:500px;
+  // width:250px;
   background-size: cover;
 }
 
@@ -25,14 +25,14 @@
 }
 
 .photo-profile {
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   margin: 0 auto;
   background-position: center;
   border-radius:50%;
   border: 4px solid white;
   background-size: cover;
-  margin-top : 10px;
+  margin-top : 20px;
 }
 
 .photo-profile img {
@@ -44,12 +44,43 @@
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   margin-top: 10px;
 }
 .fas.fa-star{
-  color: #f32;
+  color: #EB9486;
+}
+
+.fas.fa-dice{
+  margin-top: 50px;
+  border-radius : 500px;
+  border: 3px solid black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 10px;
+
+}
+
+.fas.fa-utensils{
+  margin-top: 50px;
+  border-radius : 500px;
+  border: 3px solid black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 10px;
+}
+
+.fas.fa-theater-masks{
+  margin-top: 50px;
+  border-radius : 500px;
+  border: 3px solid black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 10px;
+}
+
+.icones{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
