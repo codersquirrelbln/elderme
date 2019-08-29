@@ -1,7 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"/>
- <!-- insert the link_to functionality here so the logo in the navbar leads back to index page -->
+  <%= link_to profiles_path, class: 'navbar-brand' do %>
+    <%= image_tag 'logo' %>
+  <% end %>
+
 
 </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
