@@ -11,7 +11,7 @@ class RequestsController < ApplicationController
 
   def new
     @request = Request.new
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:profile_id])
   end
 
   def create

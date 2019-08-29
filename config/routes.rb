@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:destroy, :new, :create]
 
-  resources  :profiles, only: [:show, :index] do
-    resources :requests, only: [:new, :index, :show, :destroy, :create]
+  resources :profiles, only: [:show, :index] do
+    resources :requests, only: [:new, :show, :create]
   end
+
+  resources :requests, only: [:index, :destroy]
   # resources :pages, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
