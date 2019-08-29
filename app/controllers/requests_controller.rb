@@ -16,12 +16,11 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(requests_params)
-    @user = User.find(params[:user_id])
+    @volunteer = User.find(params[:user_id])
     @request.senior = current_user
-    @request.volunteer = @user
+    @request.volunteer = @volunteer
     if @request.save
-      # redirect_to user_path(@user)
-      redirect_to user_requests_path
+      redirect_to profile_requests_path(@volunteer)
     else
       render :new
     end
