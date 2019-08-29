@@ -1,29 +1,19 @@
-<h1>These are all the users</h1>
-<!-- implement search options with all the interests to toggle -->
-<!-- iterate through all the users -->
+<h1>Index of all the volunteers</h1>
 
 <div class="container">
   <div class="row">
-    <% @users.each do |user| %>
-    <div class="col-xs-12 col-md-4">
-      <div class="card-user-infos">
-        <h2><%= user.first_name.last_name %></h2>
+    <div class="col-xs-12 col-md-6">
+      <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+        <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
+        <div class="card-trip-infos">
+          <div>
+            <h2>Michelle Obama</h2><button type="button" class="btn btn-primary button-action">MY PROFILE</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-<% @users.each do |user| %>
-<!-- card -->
-  <%=  %>
-  <%=  %>
-<% end %>
-Réduire
-
 
 
 
