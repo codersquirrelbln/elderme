@@ -11,7 +11,7 @@ class RequestsController < ApplicationController
 
   def new
     @request = Request.new
-    @user = User.find(params[:profile_id])
+    @volunteer = User.find(params[:user_id])
   end
 
   def create
@@ -20,7 +20,7 @@ class RequestsController < ApplicationController
     @request.senior = current_user
     @request.volunteer = @volunteer
     if @request.save
-      redirect_to profile_requests_path(@volunteer)
+      redirect_to requests_path
     else
       render :new
     end

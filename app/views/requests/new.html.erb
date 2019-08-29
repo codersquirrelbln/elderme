@@ -1,7 +1,7 @@
 <h1>New request (message)</h1>
-<%= link_to "Back", profile_path(@user), class: 'btn btn-primary'%>
+<%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary'%>
 
-<%= simple_form_for [@profile, @request] do |f| %>
+<%= simple_form_for [@volunteer, @request] do |f| %>
   <%= f.input :date %> <!-- implement datepickr -->
   <!-- implement time in nicer way like datepickt -->
   <%= f.input :start_time %>
@@ -14,8 +14,5 @@
   <%= f.submit %>
 <% end %>
 
-
-
-
-<%= link_to "Cancel", profile_path(@user), class: 'btn btn-primary'%>
+<%= link_to "Cancel", profile_path(@volunteer), class: 'btn btn-primary'%>
 
