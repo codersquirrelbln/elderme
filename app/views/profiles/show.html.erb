@@ -1,12 +1,3 @@
-<style>
-  body {
-      background: #E5E5E5
-       }
-       .btn-primary {
-        padding: 10px;
-        margin: 10px;
-       }
-</style>
 <div class="container-fluid">
   <div class="row">
     <div class="col-6">
@@ -19,22 +10,22 @@
         <div class="card-user">
 
           <ul>
-            <li>s<%= @user.first_name %></li>
-            <li>s<%= @user.last_name %></li>
-            <li>s<%= @user.city %></li>
-            <li>s<%= @user.gender %></li>
-            <li>s<%= @user.age %></li>
-            <li><%= @user.mobility %></li>
+            <li">s<%= @user.first_name %>Nwar</li>
+            <li>s<%= @user.last_name %>Jbawi</li>
+            <li>s<%= @user.city %>Dubai</li>
+            <li>s<%= @user.gender %>Male</li>
+            <li>s<%= @user.age %>30</li>
+            <li><%= @user.mobility %>No</li>
           </ul>
            <hr>
           <div class="info">
-            <p>Bio: <%= @user.biography %></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores quisquam asperiores fuga rem, corporis eum repellat ab, dignissimos id quas blanditiis, fugiat! Praesentium optio autem dolore. Vitae cupiditate, laborum! <%= @user.biography %></p>
           </div>
         </div>
       </div>
     </div>
     <div class="col-6">
-      <div class="interest-wrapper">
+      <div class="interest-wrapper" style="width: 500px">
 
         <% @user.interests.each do |interest| %>
           <div class="inter-item">
@@ -48,8 +39,11 @@
 <div class="container container-buttons d-flex justify-content-center">
   <div class="send">
     <%= link_to "Back", users_path, class: 'btn btn-primary'%>
-    <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary'%>
+    <%= link_to "Send message", new_profile_request_path(@user), class: 'btn btn-primary'%>
   </div>
 </div>
+
+
+
 
 

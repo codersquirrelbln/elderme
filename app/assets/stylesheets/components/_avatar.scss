@@ -52,6 +52,11 @@
   align-items: flex-end;
   position: relative;
 }
+.card-user ul{
+  font-size: 23px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
 
 .card-user-info  {
   position: absolute;
@@ -59,16 +64,21 @@
   top: -20px;
   width: 40px;
 }
-
-.interest-wrapper {
-  height: 400px;
-  width :500px;
+.info {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: left;
 }
 
 .interest-wrapper {
- display: grid;
+  height: 400px;
+  width :400px;
+}
+
+.interest-wrapper {
+  display: grid;
   justify-content: space-evenly;
-  grid-template-columns: 50px 50px; /*Make the grid smaller than the container*/
+  grid-template-columns: 50px 50px;
   grid-gap: 10px;
   padding: 10px;
   height: 400px;
@@ -80,4 +90,12 @@
     list-style: none;
     padding-inline-start: 0;
   }
+}
+.container-fluid {
+    width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #F4F4F4;
 }
