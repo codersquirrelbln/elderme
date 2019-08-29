@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :user_interests
   has_many :interests, through: :user_interests
+  has_many :requests_as_asker, source: :requests, foreign_key: :senior_id
+  has_many :requests_as_receiver, source: :requests, foreign_key: :volunteer_id
 end

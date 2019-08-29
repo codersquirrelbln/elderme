@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_122630) do
+ActiveRecord::Schema.define(version: 2019_08_29_120748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 2019_08_28_122630) do
     t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "senior_id"
-    t.integer "volunteer_id"
+    t.bigint "senior_id"
+    t.bigint "volunteer_id"
+    t.index ["senior_id"], name: "index_requests_on_senior_id"
+    t.index ["volunteer_id"], name: "index_requests_on_volunteer_id"
   end
 
   create_table "user_interests", force: :cascade do |t|
@@ -67,6 +69,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_122630) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "requests", "users", column: "senior_id"
+  add_foreign_key "requests", "users", column: "volunteer_id"
   add_foreign_key "user_interests", "interests"
   add_foreign_key "user_interests", "users"
 end
