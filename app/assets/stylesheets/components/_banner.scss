@@ -1,9 +1,11 @@
+.home-wrapper {
+
 .container {
   display: flex;
 }
 
 .banner-img img {
-  height: 500px;
+  height: 550px;
 }
 
 .container-landing {
@@ -11,5 +13,7 @@
   flex-direction: column;
   display: flex;
   justify-content: center;
+}
 
 }
+
