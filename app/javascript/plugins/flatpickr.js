@@ -6,10 +6,9 @@
 
 
 import flatpickr from "flatpickr"
-import "flatpickr/dist/flatpickr.min.css" // Note this is important!
 
-flatpickr(".datepicker", {
-    mode: "range",
+function initializeFlatpickr() {
+  flatpickr(".datepicker", {
     minDate: "today",
     dateFormat: "Y-m-d",
     disable: [
@@ -18,5 +17,8 @@ flatpickr(".datepicker", {
             return !(date.getDate() % 8);
         }
     ]
- // mode: "range"
-});
+  // mode: "range"
+  });
+}
+
+export default initializeFlatpickr;

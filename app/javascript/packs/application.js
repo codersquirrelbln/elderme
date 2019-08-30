@@ -1,10 +1,5 @@
-// import "bootstrap";
-// import "flatpickr";
-
 import "bootstrap";
-// import flatpickr from 'flatpickr';
-import "../plugins/flatpickr"
+import initializeFlatpickr from "../plugins/flatpickr";
+import "flatpickr/dist/flatpickr.min.css" // Note this is important!
 
-flatpickr(".datepickr", {
-
-});
+initializeFlatpickr();
