@@ -2,10 +2,18 @@
   body {
     background-color: #ffc0cb33;
   }
+
   .form {
     text-align: center;
     padding: 15px;
     margin: 15px;
+  }
+
+  .form a {
+    background-color: #48ACF0;
+    color: white;
+    padding:9px;
+    margin: 10px;
   }
 </style>
 <%- if controller_name != 'sessions' %>
@@ -14,12 +22,14 @@
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
 <div class="form">
-  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+  <div class=" btn btn-primary">
+  <%= link_to "Sign up" , new_registration_path(resource_name) %></div><br />
 <% end %>
 
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-  </div>
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %> <br>
+  <div class="btn btn-primary" ><%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+ </div>
+</div>
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
