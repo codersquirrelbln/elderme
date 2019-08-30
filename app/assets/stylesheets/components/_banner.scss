@@ -1,19 +1,18 @@
 .home-wrapper {
 
-.container {
+  .container {
   display: flex;
-}
+  }
 
-.banner-img img {
+  .banner-img img {
   height: 550px;
-}
+  }
 
-.container-landing {
-  vertical-align: middle;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-}
-
+  .container-landing {
+    vertical-align: middle;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
 }
 
