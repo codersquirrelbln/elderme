@@ -10,16 +10,16 @@
         <div class="card-user">
 
           <ul>
-            <li">s<%= @user.first_name %>Nwar</li>
-            <li>s<%= @user.last_name %>Jbawi</li>
-            <li>s<%= @user.city %>Dubai</li>
-            <li>s<%= @user.gender %>Male</li>
-            <li>s<%= @user.age %>30</li>
-            <li><%= @user.mobility %>No</li>
+            <li><%= @user.first_name %>Hannah  <%= @user.last_name %>Schulz</li>
+
+            <li><%= @user.city %>Berlin</li>
+            <li><%= @user.gender %>Female</li>
+            <li><%= @user.age %>30</li>
+            <li><%= @user.mobility %></li>
           </ul>
            <hr>
           <div class="info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores quisquam asperiores fuga rem, corporis eum repellat ab, dignissimos id quas blanditiis, fugiat! Praesentium optio autem dolore. Vitae cupiditate, laborum! <%= @user.biography %></p>
+            <p>I love walking my dog and going to the Stadium to watch Fussball</p>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 </div>
 <div class="container container-buttons d-flex justify-content-center">
   <div class="send">
-    <%= link_to "Back", users_path, class: 'btn btn-primary'%>
+    <%= link_to "Back", profiles_path, class: 'btn btn-primary'%>
     <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary' %>
   </div>
 </div>

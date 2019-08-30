@@ -12,8 +12,9 @@
             <div class="icones">
             <i class="fas fa-dice fa-border fa-2x"></i> <i class="fas fa-utensils fa-border fa-2x"></i> <i class="fas fa-theater-masks fa-border fa-2x" ></i>
             </div>
-            <button type="button" class="btn btn-primary button-action" id="profile-btn">MY PROFILE</button>
+
             </div>
+            <%= link_to "MY PROFILE", profile_path(user), class: "btn btn-primary button-action-profile"%>
           </div>
         </div>
       <% end %>
