@@ -1,8 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to profiles_path, class: 'navbar-brand' do %>
-    <div class="logo-elderme" style="background-image: url('<%= cl_image_path("logo_v5")%>');">
+    <div class="logo-elderme">
+      <%= link_to profiles_path, class: 'navbar-brand' do %>
+        <%= image_tag "logo.png" %>
+      <% end %>
     </div>
-  <% end %>
 
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
