@@ -26,11 +26,24 @@ class RequestsController < ApplicationController
     end
   end
 
+  def edit
+    @request = Request.find(params[:id])
+  end
+
+  def update
+    @request = Request.find(params[:id])
+    if @request.update(requests_params)
+      redirect_to dashboard_path
+    else
+      render :new
+    end
+  end
+
   def destroy
     @request = Request.find(params[:id])
     @user = User.find(params[:user_id])
     @request.delete
-    redirect_to user_path(@user)
+    # redirect_to user_path(@user)
   end
 
   private
