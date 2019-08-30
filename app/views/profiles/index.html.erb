@@ -1,3 +1,24 @@
-<h1>Index of all the volunteers</h1>
-
-
+<h1>Our selection of volunteers</h1>
+<body class ="home-wrapper-2">
+<div class="container">
+  <div class="row">
+      <% @users.each do |user| %>
+    <div class="col-12 col-sm-6 col-md-4 mb-3">
+      <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+        <div>
+        <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
+            <h2>Michelle Obama</h2>
+            <i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i>
+            <div class="icones">
+            <i class="fas fa-dice fa-border fa-2x"></i> <i class="fas fa-utensils fa-border fa-2x"></i> <i class="fas fa-theater-masks fa-border fa-2x" ></i>
+            </div>
+            <button type="button" class="btn btn-primary button-action" id="profile-btn">MY PROFILE</button>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
