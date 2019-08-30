@@ -1,8 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
   <%= link_to profiles_path, class: 'navbar-brand' do %>
-    <%= image_tag 'logo' %>
-  <% end %>
+  <div class="logo-elderme" style="background-image: url('<%= cl_image_path("logo_v5")%>');">
+<% end %>
 
 
 </a>
@@ -31,9 +30,6 @@
       <% else %>
 
         <li class="nav-item signup">
-
-
-
 
       <div class="button-center">
         <%= button_to "Sign up", new_user_session_path, class: 'btn btn-primary button-action'%>
