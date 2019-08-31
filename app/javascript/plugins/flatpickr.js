@@ -1,10 +1,3 @@
-// import '../plugins/flatpickr';
-// import flatpickr from 'flatpickr'
-// import 'flatpickr/dist/flatpickr.min.css';
-
-// flatpickr('.datepicker', {});
-
-
 import flatpickr from "flatpickr"
 
 function initializeFlatpickr() {
@@ -17,7 +10,12 @@ function initializeFlatpickr() {
     //         return !(date.getDate() % 8);
     //     }
     // ]
-  // mode: "range"
+  });
+
+  flatpickr(".timepicker", {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
   });
 }
 

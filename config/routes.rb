@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :requests, only: [:new, :create]
   end
 
-  resources :requests, only: [:index, :show, :edit, :destroy]
+  resources :requests, only: [:index, :show, :edit, :update, :destroy]
   # resources :pages, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -5,13 +5,12 @@
 <br></br>
 <div>
   <% @requests.each do |request| %>
-    <%= request.date %>
+    <li> <%= request.date %> </li>
     <%= request.start_time %>
     <%= request.end_time %>
     <%= request.meeting_point %>
     <%= request.event_kind %>
     <!-- request.status -->
-    <%= request.topic %>
     <%= request.message %>
     <!-- #request.senior_id -->
     <!-- request.volunteer_id -->
@@ -21,6 +20,6 @@
   <% end %>
   <br></br>
 </div>
-<br></br>
+
 <!-- display calendar with corresponding requests in it -->
 

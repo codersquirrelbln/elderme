@@ -2,28 +2,22 @@
 
 <%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
 
-
 <div>
-
   <ul>
     <li> <%= @request.date %> </li>
     <li> <%= @request.start_time %> </li>
     <li> <%= @request.end_time %> </li>
     <li> <%= @request.meeting_point %> </li>
-    <li> <%=  %> </li>
-    <li> <%=  %> </li>
-    <li> <%=  %> </li>
-    <li> <%=  %> </li>
-    <li> <%=  %> </li>
+    <li> <%= @request.message %> </li>
+    <li> volunteer: <%= @request.volunteer.first_name %> </li>
   </ul>
 </div>
-<p>16:00-18:30</p>
+<!-- <p>16:00-18:30</p> -->
 
-<p>Meeting with: Hannah Schulz</p>
+<!-- <p>Meeting with: Hannah Schulz</p> -->
 
 <%= link_to "Edit", edit_request_path(@request), class: 'btn btn-primary'%>
 
-<%= link_to "Delete", requests_path, class: 'btn btn-primary'%>
-
-
+<%= link_to "Delete", request_path, class: 'btn btn-primary', method: :delete, data: { confirm: "Are you sure?" }
+ %>
 
