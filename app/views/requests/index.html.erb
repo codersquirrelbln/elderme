@@ -2,7 +2,7 @@
 
 <!-- iterate through all requests -->
 <%= link_to "Back", profiles_path(@request), class: 'btn btn-primary'%>
-
+<br></br>
 <div>
   <% @requests.each do |request| %>
     <%= request.date %>
@@ -10,13 +10,17 @@
     <%= request.end_time %>
     <%= request.meeting_point %>
     <%= request.event_kind %>
-    <%= request.status %>
+    <!-- request.status -->
     <%= request.topic %>
     <%= request.message %>
     <!-- #request.senior_id -->
-    <%= request.volunteer_id %>
+    <!-- request.volunteer_id -->
+
     <%= link_to "Show", request_path(request), class: 'btn btn-primary'%>
+    <br></br>
   <% end %>
+  <br></br>
 </div>
+<br></br>
 <!-- display calendar with corresponding requests in it -->
 
