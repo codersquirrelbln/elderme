@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: rgba(0,0,0,0.0);
+  z-index: 3;
+  height: 60px;
 }
 
 .navbar-nav{
@@ -21,7 +23,9 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 400px;
+  margin-top: 30px;
+  margin-x: 30px
 }
 
 .navbar-nav {

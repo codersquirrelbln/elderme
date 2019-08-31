@@ -29,7 +29,7 @@ require 'faker'
     password: "login123",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    age: random_number(75..99),
+    age: 75,
     gender: Faker::Gender.binary_type,
     location: Faker::Address.street_address,
     city: Faker::Address.city,

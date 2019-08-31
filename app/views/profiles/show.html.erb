@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <img class="avatar1" src="https://images.unsplash.com/photo-1566916926776-87b869e2f2a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=834&q=80">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="user-info-container">
+        <div class="card-user">
+
+          <ul>
+            <li><%= @user.first_name %>Hannah  <%= @user.last_name %>Schulz</li>
+
+            <li><%= @user.city %>Berlin</li>
+            <li><%= @user.gender %>Female</li>
+            <li><%= @user.age %>30</li>
+            <li><%= @user.mobility %></li>
+          </ul>
+           <hr>
+          <div class="info">
+            <p>I love walking my dog and going to the Stadium to watch Fussball</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="interest-wrapper" style="width: 500px">
+
+        <% @user.interests.each do |interest| %>
+          <div class="inter-item">
+            <%= interest.title %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+ </div>
+</div>
+<div class="container container-buttons d-flex justify-content-center">
+  <div class="send">
+    <%= link_to "Back", profiles_path, class: 'btn btn-primary'%>
+    <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary' %>
+  </div>
+</div>
+
+
+
+
+

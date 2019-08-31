@@ -1,18 +1,39 @@
 class RequestsController < ApplicationController
    # skip_before_action :authenticate_user!, only: [:new, :create, :index, :show]
+
+  def index
+    @requests = Request.all
+  end
+
+  def show
+    @request = Request.find(params[:id])
+  end
+
   def new
     @request = Request.new
-    @user = User.find(params[:user_id])
+    @volunteer = User.find(params[:user_id])
   end
 
   def create
     @request = Request.new(requests_params)
-    @user = User.find(params[:user_id])
+    @volunteer = User.find(params[:user_id])
     @request.senior = current_user
-    @request.volunteer = @user
+    @request.volunteer = @volunteer
     if @request.save
-      # redirect_to user_path(@user)
-      redirect_to users_path
+      redirect_to requests_path
+    else
+      render :new
+    end
+  end
+
+  def edit
+    @request = Request.find(params[:id])
+  end
+
+  def update
+    @request = Request.find(params[:id])
+    if @request.update(requests_params)
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -22,7 +43,7 @@ class RequestsController < ApplicationController
     @request = Request.find(params[:id])
     @user = User.find(params[:user_id])
     @request.delete
-    redirect_to user_path(@user)
+    # redirect_to user_path(@user)
   end
 
   private

@@ -2,19 +2,102 @@
   width: 40px;
   border-radius: 50%;
 }
+
 .avatar-large {
   width: 56px;
   border-radius: 50%;
 }
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
 .avatar-square {
   width: 40px;
   border-radius: 0px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
+}
+
+.card-user {
+  overflow: hidden;
+  height: 400px;
+  width : 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h1{
+  text-align: center;
+}
+
+ .avatar1 {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-cell;
+  vertical-align: middle
+}
+
+.card-user .card-user-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-user ul{
+  font-size: 23px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.card-user-info {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.info {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.interest-wrapper {
+  height: 400px;
+  width :400px;
+}
+
+.interest-wrapper {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 50px 50px;
+  grid-gap: 10px;
+  padding: 10px;
+  height: 400px;
+}
+
+.card-user {
+  text-align: center;
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #F4F4F4;
 }
