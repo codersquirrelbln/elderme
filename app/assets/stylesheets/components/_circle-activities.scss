@@ -1,7 +1,7 @@
 .index-wrapper-1 {
 
 
-.activities2{
+.activities-tile{
   display: flex;
   align-items: center;
   vertical-align: middle;
@@ -11,7 +11,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-
+  margin: auto;
+  text-align: center;
 }
 
 .circle-icon {
@@ -24,6 +25,12 @@
     vertical-align: middle;
     padding: 30px;
   }
+
+
+.fas.fa-utensils{
+  color: #48ACF0;
+}
+
 }
 
 
