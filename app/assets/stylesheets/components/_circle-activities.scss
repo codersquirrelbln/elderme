@@ -1,26 +1,17 @@
-.activities2{
-  text-align:center
+.index-wrapper-1 {
+
+   .container {
+  display: flex;
+  align-items: center;
+  }
+
+  .activities2 {
+  justify-content : center;
+  }
+
 }
 
 
-.home-wrapper-3 {
-
-    .activities {
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    list-style-type:none;
-  }
 
 
-  #pastille-cine {
-    color:black
-  }
 
-  #pastille-theatre{
-    color:black
-  }
-}
