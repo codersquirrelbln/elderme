@@ -7,6 +7,7 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+
   end
 
   def new
@@ -32,7 +33,6 @@ class RequestsController < ApplicationController
 
   def update
     @request = Request.find(params[:id])
-    # @volunteer = User.find(params[:user_id])
     if @request.update(requests_params)
       redirect_to requests_path
     else
