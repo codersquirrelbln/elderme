@@ -1,12 +1,25 @@
 .index-wrapper-1 {
 
-   .container {
+   .container-pastille{
   display: flex;
   align-items: center;
+  vertical-align: middle;
+  flex-direction: row;
+  justify-content: center;
   }
 
   .activities2 {
   justify-content : center;
+  }
+.circle-icon {
+    background: #ffc0c0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
   }
 
 }
