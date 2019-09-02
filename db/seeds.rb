@@ -8,6 +8,67 @@
 require 'faker'
 
 
+volunteer1 = User.create(
+  first_name: "Bob",
+  last_name: "Bobbington",
+  email:"b.bobbington@example.com",
+  password: "123456",
+  age: "45",
+  gender: "male",
+  biography: "I love listening to classical music, going to the theater and drink tea."
+  )
+
+
+volunteer2 = User.create(
+  first_name: "Georgette",
+  last_name: "Bobbington",
+  email:"g.bobbington@example.com",
+  password: "123456",
+  age: "48",
+  gender: "female",
+  biography: "I love listening to rock music, going to the movies and play cards (bridge)."
+  )
+
+volunteer3 = User.create(
+  first_name: "Tom",
+  last_name: "Thomson",
+  email:"t.thomson@example.com",
+  password: "123456",
+  age: "55",
+  gender: "male",
+  biography: "I love sitting in the park and watch birds, or play table games like Mahjongg or chess."
+  )
+
+volunteer4 = User.create(
+  first_name: "Mary",
+  last_name: "Simmons",
+  email: "m.simmons@example.com",
+  password: "123456",
+  age: "29",
+  gender: "female",
+  biography: "I love goingt to the football stadium to see my favorite team - Hertha BSC - play. I like reading books and drinking coffee"
+  )
+
+volunteer6 = User.create(
+  first_name: "Susanna",
+  last_name: "Durand",
+  email:"s.durand@example.com",
+  password: "123456",
+  age: "31",
+  gender: "female",
+  biography: "I love cooking and going to the theater or the movies."
+  )
+
+volunteer6 = User.create(
+  first_name: "Martin",
+  last_name: "Newman",
+  email: "m.newman@example.com",
+  password: "123456",
+  age: "60",
+  gender: "male",
+  biography: "I like going to the movies."
+  )
+
 # user1 = User.create(
 #   email: "example@example.com"
 
@@ -21,6 +82,12 @@ require 'faker'
 
 
 # )
+
+interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
+
+interests.each do |i|
+  Interest.create(title:i)
+end
 
 
 5.times do |user|
