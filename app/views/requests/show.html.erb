@@ -4,15 +4,17 @@
 
 <div>
   <ul>
-    <li> <%= @request.date %> </li>
-    <li> <%= @request.start_time %> </li>
-    <li> <%= @request.end_time %> </li>
-    <li> <%= @request.meeting_point %> </li>
+    <li> Date: <%= @request.date %> </li>
+    <li> From: <%= @request.start_time %> to: <%= @request.end_time %> </li>
+    <li> Meeting Point: <%= @request.meeting_point %> </li>
     <li> <%= @request.message %> </li>
-    <li> volunteer: <%= @request.volunteer.first_name %> </li>
-    <li> volunteer: <%= @request.volunteer.last_name %> </li>
+    <a href="">
+
+      <%= link_to @request.volunteer.first_name , profile_path %>
+    </a>
   </ul>
 </div>
+
 <!-- <p>16:00-18:30</p> -->
 
 <!-- <p>Meeting with: Hannah Schulz</p> -->

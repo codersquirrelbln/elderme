@@ -10,16 +10,17 @@
         <div class="card-user">
 
           <ul>
-            <li><%= @user.first_name %>Hannah  <%= @user.last_name %>Schulz</li>
+            <li><%= @user.first_name %>  <%= @user.last_name %></li>
 
-            <li><%= @user.city %>Berlin</li>
-            <li><%= @user.gender %>Female</li>
-            <li><%= @user.age %>30</li>
+            <li><%= @user.city %></li>
+            <li><%= @user.gender %></li>
+            <li><%= @user.age %></li>
             <li><%= @user.mobility %></li>
           </ul>
            <hr>
           <div class="info">
-            <p>I love walking my dog and going to the Stadium to watch Fussball</p>
+            <li><%= @user.biography %></li>
+            <!-- <p>I love walking my dog and going to the Stadium to watch Fussball</p> -->
           </div>
         </div>
       </div>
