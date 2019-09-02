@@ -22,6 +22,12 @@ require 'faker'
 
 # )
 
+interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
+
+interests.each do |i|
+  Interest.create(title:i)
+end
+
 
 5.times do |user|
   user = User.new(
