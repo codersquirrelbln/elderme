@@ -1,22 +1,20 @@
 .index-wrapper-1 {
 
+  .activities-tile {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: row;
+    justify-content: center;
+    width:800px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+  }
 
-.activities-tile{
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  flex-direction: row;
-  justify-content: center;
-  width:800px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin: auto;
-  text-align: center;
-
-}
-
-.circle-icon {
+  .circle-icon {
     background: white;
     width: 180px;
     height: 180px;
@@ -27,7 +25,6 @@
     padding: 30px;
     margin-bottom: 30px;
   }
-
 }
 
 
