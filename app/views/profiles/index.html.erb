@@ -7,41 +7,21 @@
 
 <div class ="index-wrapper-1">
    <div class="container">
-    <% @interests.each do |interest| %>
-    <% asset_url = "#{interest.title}.svg"%>
-    <%= image_tag(asset_url, width: 85, height:85) %>
-    <% end %>
+
 
   <%= form_tag profiles_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
+   <% @interests.each do |interest| %>
+    <label class="circle-activities">
+        <% asset_url = "#{interest.title}.svg"%>
+        <%= image_tag(asset_url, width: 85, height:85) %>
+      <%= check_box_tag('interests[]', interest.id, checked=false, hidden:true, class:"check-me") %>
+    </label>
+  <% end %>
+  <%#= collection_select :title, :id, Interest.all, :id, :title %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
-
-<!-- <div class="form-group">
-   <label class="control-label check_boxes optional">Interests</label>
-    <input type="hidden" name="post[interest_ids][]" value="">
-    <div class="interest-choices">
-       <div>class="interest-filter"
-          <%# Interest.all.each do |interest| %>
-     <input type="checkbox" class="hidden" value="<%#= interest.id %>"name="post[interest_ids][]" id="post_interest_ids_<%#= interest.id %>">
-          <label for="post_interest_ids_<%#= interest.id %>">
-         <%#= interest.title %>
-          <i class="fa fa-check"></i>
-          </label>
-        <%# end %>
-      </div>
-   </div>
-</div> -->
-
-
-
-
-       <div class="col-sm-12 col-md-4 col-lg-12">
+<!--        <div class="col-sm-12 col-md-4 col-lg-12">
         <div class="activities-tile">
           <i class="fas fa-film fa-5x circle-icon fa-border" id="pastille-cine"></i>Cinema
           <i class="fas fa-theater-masks fa-5x circle-icon fa-border" id="pastille-theatre"></i>Theatre
@@ -51,7 +31,7 @@
           <i class="fas fa-walking fa-5x circle-icon fa-border"></i>Outdoors
         </div>
       </div>
-    </div>
+ -->    </div>
   </div>
 </div>
 
