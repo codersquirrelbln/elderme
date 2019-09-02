@@ -1,7 +1,5 @@
 <h1>All my Requests</h1>
 <div class="container">
-
-
   <%= month_calendar events: @requests, attribute: :formatted_start, end_attribute: :formatted_end do |date, request| %>
     <%= date %>
 
@@ -13,7 +11,7 @@
     <!--      r.start_time %> -->
     <!--      r.end_time %> -->
     <!-- r.status -->
-  
+
         <%= r.meeting_point %>
         <%= r.status %>
         <%= r.topic %>
@@ -25,6 +23,6 @@
       <% end %>
     <% end %>
   <% end %>
-  
+
   <%= link_to "Back", profiles_path(@request), class: 'btn btn-primary'%>
 </div>
