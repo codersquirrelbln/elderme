@@ -21,7 +21,7 @@ require 'faker'
 
 
 # )
-Interest.create!(title: "outdoors")
+
 
 interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
 
