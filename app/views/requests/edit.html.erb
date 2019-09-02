@@ -3,16 +3,16 @@
 
 <%= link_to "Back", requests_path, class: 'btn btn-primary'%>
 
-<%= simple_form_for [@volunteer, @request] do |f| %>
+<%= simple_form_for @request do |f| %>
   <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
   <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"}%>
   <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"} %>
   <%= f.input :meeting_point %>
   <%= f.input :event_kind %>
   <!-- filled in automatically? -->
-  <%= f.text_field :message %>
-
+  <%= f.input :message %>
+  <%= f.submit "Save", {data: { confirm: "Are you sure?" }, class: 'btn btn-primary'}%>
 <% end %>
 
-<%= link_to "Save", request_path, method: :patch, data: { confirm: "Are you sure?" }, class: 'btn btn-primary'%>
+
 <%= link_to "Cancel", request_path, class: 'btn btn-primary'%>
