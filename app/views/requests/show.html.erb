@@ -1,7 +1,7 @@
 <div class="container">
   <div class="more_info" >
     <h1>Show Request</h1>
-            
+
     <%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
     <ul>
       <li><%= @request.date %></li>
@@ -10,7 +10,7 @@
       <li><%= @request.topic %></li>
       <li><%= @request.message %></li>
       <a href="">
-        <%= link_to @request.volunteer.first_name , profile_path %>
+        <%= link_to "#{@request.volunteer.first_name} #{@request.volunteer.last_name}" , profile_path %>
       </a>
     </ul>
     <div class="info">
