@@ -1,6 +1,13 @@
 <h1>Our selection of volunteers</h1>
 
 
+<% @interests %>
+
+<% @interests.each do |interest| %>
+<% asset_url = "#{interest.title}.svg"%>
+<%= image_tag(asset_url, width: 85, height:85) %>
+<% end %>
+
 <div class ="index-wrapper-1">
   <div class="container">
        <div class="col-sm-12 col-md-4 col-lg-12">

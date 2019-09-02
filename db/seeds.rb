@@ -21,6 +21,7 @@ require 'faker'
 
 
 # )
+Interest.create!(title: "outdoors")
 
 
 5.times do |user|
@@ -43,12 +44,7 @@ end
 puts "#{User.count} users were created"
 
 
-20.times do |interest|
-  interest = Interest.new(
-    title:Faker::Military.marines_rank
-    )
-  interest.save!
-end
+
 
 
 
