@@ -1,26 +1,25 @@
-<h1>Show Request</h1>
+<div class="container">
+  <div class="more_info" >
+    <h1>Show Request</h1>
+            
+    <%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
+    <ul>
+      <li><%= @request.date %></li>
+      <li><%= @request.meeting_point %></li>
+      <li><%= @request.status %></li>
+      <li><%= @request.topic %></li>
+      <li><%= @request.message %></li>
+      <a href="">
+        <%= link_to @request.volunteer.first_name , profile_path %>
+      </a>
+    </ul>
+    <div class="info">
 
-<%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
+      <%= link_to "Edit", edit_request_path(@request), class: 'btn btn-primary'%>
 
-<div>
-  <ul>
-    <li> Date: <%= @request.date %> </li>
-    <li> From: <%= @request.start_time %> to: <%= @request.end_time %> </li>
-    <li> Meeting Point: <%= @request.meeting_point %> </li>
-    <li> <%= @request.message %> </li>
-    <a href="">
-
-      <%= link_to @request.volunteer.first_name , profile_path %>
-    </a>
-  </ul>
+      <%= link_to "Delete", request_path, class: 'btn btn-primary', method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
 </div>
 
-<!-- <p>16:00-18:30</p> -->
-
-<!-- <p>Meeting with: Hannah Schulz</p> -->
-
-<%= link_to "Edit", edit_request_path(@request), class: 'btn btn-primary'%>
-
-<%= link_to "Delete", request_path, class: 'btn btn-primary', method: :delete, data: { confirm: "Are you sure?" }
- %>
 
