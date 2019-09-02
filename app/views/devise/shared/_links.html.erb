@@ -21,8 +21,8 @@
     display: flex;
     justify-content: center;
   }
-  #signup {
-    width: 150px;
+  #forgetpassword {
+    width: 250px;
     height: 42px;
   }
 </style>
@@ -38,7 +38,7 @@
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %> <br>
-  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-primary", id: 'signup' %><br />
+  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-primary", id: 'forgetpassword' %><br />
 </div>
 <% end %>
 
