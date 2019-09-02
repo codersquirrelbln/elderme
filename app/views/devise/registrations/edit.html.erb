@@ -13,13 +13,13 @@
         </div>
         <div class="gender">
                 <h4 class="gen">Gender</h4>
-                  <%= radio_button_tag(:gender, "Male") %>
-                  <%= label_tag(:gender, "Male") %>
+                  <%= radio_button_tag(:gender, "male") %>
+                  <%= label_tag(:gender, "male") %>
 
-                  <%= radio_button_tag(:gender, "female") %>
-                  <%= label_tag(:gender, "female") %>
-                  <%= radio_button_tag(:gender, "other") %>
-                  <%= label_tag(:gender, "other") %>
+                  <%= radio_button_tag(:gender, "Female") %>
+                  <%= label_tag(:gender, "Female") %>
+                  <%= radio_button_tag(:gender, "Other") %>
+                  <%= label_tag(:gender, "Other") %>
         </div>
                   <%= f.input :first_name %>
                   <%= f.input :last_name %>
@@ -32,14 +32,14 @@
                   <% end %>
                       <%= f.input :biography %>
                   <%= f.input :password,
-                              hint: "leave it blank if you don't want to change it",
+                              hint: "Leave it blank, if you don't want to change it",
                               required: false,
                               input_html: { autocomplete: "new-password" } %>
                   <%= f.input :password_confirmation,
                               required: false,
                               input_html: { autocomplete: "new-password" } %>
                   <%= f.input :current_password,
-                              hint: "we need your current password to confirm your changes",
+                              hint: "Please insert your current password to confirm your changes",
                               required: true,
                               input_html: { autocomplete: "current-password" } %>
 
