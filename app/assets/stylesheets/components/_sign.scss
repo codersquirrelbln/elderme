@@ -19,11 +19,11 @@
   padding: 20px;
 }
 
-.sub {
+.btn-primary{
   border-radius: 50px;
   background-color: #48ACF0;
   color: white;
-  width:150px;
+  width:250px;
   padding: 2px 2px 3px 3px;
   margin: 5px;
 }
@@ -38,6 +38,7 @@ a {
   text-align: center;
 }
 
-.btn {
-  color:white;
+.form-actions {
+  display: flex;
+  justfiy-content: center;
 }

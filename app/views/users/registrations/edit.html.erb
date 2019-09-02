@@ -1,3 +1,4 @@
+<%= link_to "Back", profiles_path, class: "btn btn-primary" %>
 <h2 class="h2">Edtion of profile of the <%= resource_name.to_s.humanize %></h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -44,13 +45,10 @@
                               input_html: { autocomplete: "current-password" } %>
 
               <div class="form-actions">
-                  <div class="sub">
-                    <%=  f.button :submit, "Update" %>
-                  </div>
-                  <div class="sub1">
-                    <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-              </div>
-          <%= link_to "Bac", profiles_path %>
+                    <%=  f.button :submit, "Update", class: "btn btn-primary" %><br>
+                    <%= link_to "Cancel my account", registration_path(resource_name), class: "btn btn-primary", data: { confirm: "Are you sure?" }, method: :delete %><br>
+
+
   </div>
       <% end %>
 </div>
