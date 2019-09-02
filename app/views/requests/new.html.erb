@@ -9,6 +9,7 @@
     justify-content: center;
   }
 </style>
+<%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary'%>
 <h1>New request (message)</h1>
 <div class="container">
 <%= simple_form_for [@volunteer, @request] do |f| %>
@@ -23,7 +24,6 @@
   <%= f.submit "Create Request", class: 'btn btn-primary' %>
 <% end %>
 <%= link_to "Cancel", profile_path(@volunteer), class: 'btn btn-primary'%>
-<%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary'%>
 </div>
 </div>
 
