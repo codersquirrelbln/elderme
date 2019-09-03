@@ -3,8 +3,7 @@
     width: 50%;
     height: 500px;
   }
-</style>
-
+</style><br><br>
 <%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
 <div class="container">
   <div class="more_info" >
@@ -15,6 +14,9 @@
       <li><%= @request.status %></li>
       <li><%= @request.topic %></li>
       <li><%= @request.message %></li>
+      <a href="">
+        <%= link_to "#{@request.volunteer.first_name} #{@request.volunteer.last_name}" , profile_path %>
+      </a>
     </ul>
     <div class="info">
       <%= link_to "Edit", edit_request_path(@request), class: 'btn btn-primary'%>
