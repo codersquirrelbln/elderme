@@ -8,6 +8,7 @@
 require 'faker'
 
 User.destroy_all
+# p "destroying all users"
 Interest.destroy_all
 
 interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]

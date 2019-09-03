@@ -48,6 +48,6 @@ class RequestsController < ApplicationController
   private
 
   def requests_params
-    params.require(:request).permit(:date, :start_time, :end_time, :event_kind, :meeting_point, :message)
+    params.require(:request).permit(:date, :start_time, :end_time, :meeting_point, :message)
   end
 end
