@@ -1,8 +1,13 @@
+<style>
+  .container {
+    width: 50%;
+    height: 500px;
+  }
+</style><br><br>
+<%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
 <div class="container">
   <div class="more_info" >
     <h1>Show Request</h1>
-
-    <%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
     <ul>
       <li><%= @request.date %></li>
       <li><%= @request.meeting_point %></li>
@@ -14,9 +19,7 @@
       </a>
     </ul>
     <div class="info">
-
       <%= link_to "Edit", edit_request_path(@request), class: 'btn btn-primary'%>
-
       <%= link_to "Delete", request_path, class: 'btn btn-primary', method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
   </div>

@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+User.destroy_all
+Interest.destroy_all
+
+interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
+
+interests.each do |i|
+  Interest.create(title:i)
+end
+
 
 volunteer1 = User.create(
   first_name: "Bob",
@@ -83,11 +92,7 @@ volunteer6 = User.create(
 
 # )
 
-interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
 
-interests.each do |i|
-  Interest.create(title:i)
-end
 
 
 # 5.times do |user|
@@ -107,6 +112,7 @@ end
 #   user.save!
 # end
 
+
 # puts "#{User.count} users were created"
 
 
@@ -116,6 +122,12 @@ end
 #     )
 #   interest.save!
 # end
+
+#puts "#{User.count} users were created"
+
+
+
+
 
 
 

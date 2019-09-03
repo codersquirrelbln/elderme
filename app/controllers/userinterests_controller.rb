@@ -1,2 +1,2 @@
-class UserinterestsController < ApplicationController
+class UserInterestsController < ApplicationController
 end
