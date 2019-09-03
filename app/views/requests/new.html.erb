@@ -20,8 +20,11 @@
   <label>Message</label>
   <%= f.text_field :message %>
   <div class="butu">
-  <%= f.submit "Create Request", id: 'sweet-alert', class: 'btn btn-primary alert' %>
+  <%= f.submit "Create Request", id: 'sweet-alert', class: 'btn btn-primary new-request' %>
+  <%= f.submit "Create hidden", class: 'btn btn-primary alert new-request d-none' %>
 <% end %>
 <%= link_to "Cancel", profile_path(@volunteer), class: 'btn btn-primary'%>
 </div>
 </div>
+
+
