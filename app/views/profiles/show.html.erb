@@ -81,6 +81,9 @@ h2 {
   .biographay p {
     list-style: none;
   }
+  .watch  {
+    margin-top: 100px;
+  }
 
  </style>
 <div class ="home-wrapper-2">
@@ -106,15 +109,25 @@ h2 {
           </div>
         <div class="send">
               <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary' %>
-              <%= link_to "Back", profiles_path, class: 'btn btn-primary'%></div>
         </div>
        </div>
+
+
+
+       <div class="col-7">
+    <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+        <div>
+
+
+        </div>
+         <div class="watch">
+              <%= link_to "Watch", new_user_request_path(@user), class: 'btn btn-primary' %>
+              <%= link_to "Pause", profiles_path, class: 'btn btn-primary'%></div>
+       </div>
        </div>
     </div>
     </div>
-  </div>
- </div>
-</div>
+
 
 
 
