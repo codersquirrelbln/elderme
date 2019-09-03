@@ -1,9 +1,13 @@
 .info {
   text-align: center;
 }
+
 .more_info {
    text-align: center;
 }
+
 ul {
-  display: none;
+  li {
+  list-style: none;
+ }
 }
