@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+User.destroy_all
+Interest.destroy_all
+
+interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
+
+interests.each do |i|
+  Interest.create(title:i)
+end
+
 
 volunteer1 = User.create(
   first_name: "Bob",
@@ -83,39 +92,29 @@ volunteer6 = User.create(
 
 # )
 
-interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
-
-interests.each do |i|
-  Interest.create(title:i)
-end
 
 
-5.times do |user|
-  user = User.new(
-    email: Faker::Internet.email,
-    password: "login123",
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    age: 75,
-    gender: Faker::Gender.binary_type,
-    location: Faker::Address.street_address,
-    city: Faker::Address.city,
-    mobility: [true, false].sample,
-    # senior: [true, false].sample
-    biography: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
-    )
-  user.save!
-end
+# 5.times do |user|
+#   user = User.new(
+#     email: Faker::Internet.email,
+#     password: "login123",
+#     first_name: Faker::Name.first_name,
+#     last_name: Faker::Name.last_name,
+#     age: 75,
+#     gender: Faker::Gender.binary_type,
+#     location: Faker::Address.street_address,
+#     city: Faker::Address.city,
+#     mobility: [true, false].sample,
+#     # senior: [true, false].sample
+#     biography: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
+#     )
+#   user.save!
+# end
 
 puts "#{User.count} users were created"
 
 
-20.times do |interest|
-  interest = Interest.new(
-    title:Faker::Military.marines_rank
-    )
-  interest.save!
-end
+
 
 
 
