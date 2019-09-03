@@ -1,3 +1,15 @@
+<!-- <style>
+  .simple-calendar {
+  ;
+  }
+
+  .event {
+    color: blue;
+  }
+
+</style>
+ -->
+
 <h1>All my Requests</h1>
 <div class="simple-calendar">
   <div class="container">
@@ -5,16 +17,16 @@
       <%= date.day %>
       <!-- To show the day of the month instead of the date -->
 
-
+    <div class="event">
       <% request.each do |r| %>
-      <%= link_to request_path(r) do %>
-        <div>
-
-          <%= r.start_time.strftime("%l:%M -")%>
-          <%= r.end_time.strftime("%l:%M") %>
-          <%= r.meeting_point %>
-        </div>
+        <%= link_to request_path(r) do %>
+          <div>
+            <%= r.start_time.strftime("%l:%M -")%>
+            <%= r.end_time.strftime("%l:%M") %>
+            <%= r.meeting_point %>
+          </div>
         <% end %>
+    </div>
       <% end %>
     <% end %>
 

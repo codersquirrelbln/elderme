@@ -58,8 +58,10 @@
   .wday-6 {}
 
   .today {
-    background: #FFFFC0
+    background: #FFFFC0;
   }
+
+  // #48ACF0 blue
 
   .past {}
   .future {}
@@ -72,7 +74,12 @@
   .next-month {
     background: #DDD;
   }
-  .current-month {}
+  .current-month {
+    font-size: 15px;
+    font-weight: bold;
+  }
 
-  .has-events {}
+  .has-events {
+
+  }
 }
