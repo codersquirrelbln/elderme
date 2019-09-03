@@ -1,28 +1,35 @@
+<!-- <style>
+  .simple-calendar {
+  ;
+  }
+
+  .event {
+    color: blue;
+  }
+
+</style>
+ -->
+
 <h1>All my Requests</h1>
-<div class="container">
-  <%= month_calendar events: @requests, attribute: :formatted_start, end_attribute: :formatted_end do |date, request| %>
-    <%= date %>
+<div class="simple-calendar">
+  <div class="container">
+    <%= month_calendar events: @requests, attribute: :formatted_start, end_attribute: :formatted_end do |date, request| %>
+      <%= date.day %>
+      <!-- To show the day of the month instead of the date -->
 
-    <% request.each do |r| %>
-    <%= link_to request_path(r) do %>
-      <div>
-    <!--  what about:  -->
-    <!--   r.date %>  -->
-    <!--      r.start_time %> -->
-    <!--      r.end_time %> -->
-    <!-- r.status -->
-
-        <%= r.meeting_point %>
-        <%= r.status %>
-        <%= r.topic %>
-        <%= r.message %>
-        <!-- #r.senior_id -->
-      <%#= link_to "Show", request_path(r), class: 'btn btn-primary'%>
-
-      </div>
+    <div class="event">
+      <% request.each do |r| %>
+        <%= link_to request_path(r) do %>
+          <div>
+            <%= r.start_time.strftime("%l:%M -")%>
+            <%= r.end_time.strftime("%l:%M") %>
+            <%= r.meeting_point %>
+          </div>
+        <% end %>
+    </div>
       <% end %>
     <% end %>
-  <% end %>
 
-  <%= link_to "Back", profiles_path(@request), class: 'btn btn-primary'%>
+    <%= link_to "Back", profiles_path(@request), class: 'btn btn-primary'%>
+  </div>
 </div>

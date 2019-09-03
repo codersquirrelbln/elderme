@@ -1,20 +1,19 @@
 .index-wrapper-1 {
 
-  .activities-tile {
+  .circle-activities-container {
     display: flex;
     align-items: center;
     vertical-align: middle;
     flex-direction: row;
     justify-content: center;
     width:800px;
-    display: flex;
-    flex-flow: row wrap;
+    flex-flow: now wrap;
     justify-content: space-around;
     margin: auto;
     text-align: center;
   }
 
-  .circle-icon {
+  .circle-activities {
     background: white;
     width: 180px;
     height: 180px;
@@ -24,7 +23,30 @@
     vertical-align: middle;
     padding: 30px;
     margin-bottom: 30px;
+    margin: 20px;
+    box-shadow: 3px 3px 10px #554d4d30;
   }
+
+  .circle-activities:hover{
+    cursor: pointer;
+  }
+.circle-activities-selected:hover{
+    cursor: pointer;
+  }
+  .circle-activities-selected {
+    background: #F2D86F;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 110px;
+    vertical-align: middle;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin: 20px;
+
+  }
+
 }
 
 

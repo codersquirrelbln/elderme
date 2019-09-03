@@ -1,15 +1,21 @@
 <style>
+
   .volunteer_link {
     text-decoration: none;
     color: #48ACF0;
   }
+   .container {
+    width: 50%;
+    height: 500px;
+  }
+
 </style>
 
-<div class="container">
-  <div class="more_info" >
-    <h1>Meeting Details</h1>
 
-    <%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
+<%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
+<div class="container">
+  <div class="more_info">
+    <h1>Meeting Details</h1>
     <ul>
       <div>
        <li> <strong>Date</strong> <%= @request.date.strftime("%b %d, %Y") %> </li>
@@ -25,9 +31,7 @@
       </div>
     </ul>
     <div class="info">
-
       <%= link_to "Edit", edit_request_path(@request), class: 'btn btn-primary'%>
-
       <%= link_to "Delete", request_path, class: 'btn btn-primary', method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
   </div>
