@@ -1,11 +1,5 @@
 <h1>Our selection of volunteers</h1>
-
-
-
 <% @interests %>
-
-
-
 <div class ="index-wrapper-1">
    <div class="container">
     <h3>Click on one or several activities :</h3>
@@ -49,6 +43,12 @@
       <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
         <div>
         <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
+             <%= user.last_name %>
+             <%= user.first_name %>
+             <= user.interest
+
+
+
             <h2>Michelle Obama</h2>
             <i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i>
             <div class="icones">
