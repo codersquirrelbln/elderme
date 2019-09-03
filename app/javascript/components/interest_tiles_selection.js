@@ -5,4 +5,4 @@ function checked(i){
 }
 
 const filters = document.querySelectorAll('.check-me');
-filters.forEach(filter => filter.addEventListener('click', checked));
+filters.forEach(filter => filter.addEventListener('click', checked))
