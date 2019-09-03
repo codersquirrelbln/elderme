@@ -24,9 +24,27 @@
     padding: 30px;
     margin-bottom: 30px;
     margin: 20px;
+    box-shadow: 3px 3px 10px #554d4d30;
   }
-  .cicle-activities-selected {
-    background: F2D86F;
+
+  .circle-activities:hover{
+    cursor: pointer;
+  }
+.circle-activities-selected:hover{
+    cursor: pointer;
+  }
+  .circle-activities-selected {
+    background: #F2D86F;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 110px;
+    vertical-align: middle;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin: 20px;
+
   }
 
 }
