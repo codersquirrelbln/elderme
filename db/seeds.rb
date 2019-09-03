@@ -30,7 +30,7 @@ volunteer1 = User.create(
   last_name: "Bobbington",
   email:"b.bobbington@example.com",
   password: "123456",
-  age: "45",
+  age: 45,
   gender: "male",
   biography: "I love listening to classical music, going to the theater and drink tea."
   )
@@ -43,7 +43,7 @@ volunteer2 = User.create(
   last_name: "Bobbington",
   email:"g.bobbington@example.com",
   password: "123456",
-  age: "48",
+  age: 48,
   gender: "female",
   biography: "I love listening to rock music, going to the movies and play cards (bridge)."
   )
@@ -54,7 +54,7 @@ volunteer3 = User.create(
   last_name: "Thomson",
   email:"t.thomson@example.com",
   password: "123456",
-  age: "55",
+  age: 55,
   gender: "male",
   biography: "I love sitting in the park and watch birds, or play table games like Mahjongg or chess."
   )
@@ -66,7 +66,7 @@ volunteer4 = User.create(
   last_name: "Simmons",
   email: "m.simmons@example.com",
   password: "123456",
-  age: "29",
+  age: 29,
   gender: "female",
   biography: "I love goingt to the football stadium to see my favorite team - Hertha BSC - play. I like reading books and drinking coffee"
   )
@@ -78,7 +78,7 @@ volunteer5 = User.create(
   last_name: "Durand",
   email:"s.durand@example.com",
   password: "123456",
-  age: "31",
+  age: 31,
   gender: "female",
   biography: "I love cooking and going to the theater or the movies."
   )
@@ -89,7 +89,7 @@ volunteer6 = User.create(
   last_name: "Newman",
   email: "m.newman@example.com",
   password: "123456",
-  age: "60",
+  age: 60,
   gender: "male",
   biography: "I like going to the movies."
   )
