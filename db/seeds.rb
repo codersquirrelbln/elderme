@@ -7,15 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-User.destroy_all
+#User.destroy_all
 # p "destroying all users"
-Interest.destroy_all
+#Interest.destroy_all
 
-interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
+# interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
 
-interests.each do |i|
-  Interest.create(title:i)
-end
+# interests.each do |i|
+#   Interest.create(title:i)
+# end
+
+cinema = Interest.create(title: "Cinema")
+theatre = Interest.create(title: "Theatre")
+eating = Interest.create(title: "Eating")
+tea_time = Interest.create(title: "Tea Time")
+playing = Interest.create(title: "Playing")
+outdoors = Interest.create(title: "Outdoors")
 
 
 volunteer1 = User.create(
@@ -28,6 +35,8 @@ volunteer1 = User.create(
   biography: "I love listening to classical music, going to the theater and drink tea."
   )
 
+volunteer1.interests = [outdoors, tea_time]
+
 
 volunteer2 = User.create(
   first_name: "Georgette",
@@ -38,6 +47,7 @@ volunteer2 = User.create(
   gender: "female",
   biography: "I love listening to rock music, going to the movies and play cards (bridge)."
   )
+volunteer2.interests = [cinema, eating, playing]
 
 volunteer3 = User.create(
   first_name: "Tom",
@@ -49,6 +59,8 @@ volunteer3 = User.create(
   biography: "I love sitting in the park and watch birds, or play table games like Mahjongg or chess."
   )
 
+volunteer3.interests = [outdoors, tea_time, eating]
+
 volunteer4 = User.create(
   first_name: "Mary",
   last_name: "Simmons",
@@ -58,8 +70,10 @@ volunteer4 = User.create(
   gender: "female",
   biography: "I love goingt to the football stadium to see my favorite team - Hertha BSC - play. I like reading books and drinking coffee"
   )
+volunteer4.interests = [theatre, playing, outdoors, tea_time]
 
-volunteer6 = User.create(
+
+volunteer5 = User.create(
   first_name: "Susanna",
   last_name: "Durand",
   email:"s.durand@example.com",
@@ -68,6 +82,7 @@ volunteer6 = User.create(
   gender: "female",
   biography: "I love cooking and going to the theater or the movies."
   )
+volunteer5.interests = [cinema, tea_time]
 
 volunteer6 = User.create(
   first_name: "Martin",
@@ -78,6 +93,7 @@ volunteer6 = User.create(
   gender: "male",
   biography: "I like going to the movies."
   )
+volunteer6.interests = [eating, playing, outdoors, tea_time]
 
 # user1 = User.create(
 #   email: "example@example.com"
