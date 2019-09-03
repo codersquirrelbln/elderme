@@ -94,6 +94,7 @@ volunteer6 = User.create(
 
 
 
+
 # 5.times do |user|
 #   user = User.new(
 #     email: Faker::Internet.email,
@@ -111,7 +112,19 @@ volunteer6 = User.create(
 #   user.save!
 # end
 
-puts "#{User.count} users were created"
+
+# puts "#{User.count} users were created"
+
+
+# 20.times do |interest|
+#   interest = Interest.new(
+#     title:Faker::Military.marines_rank
+#     )
+#   interest.save!
+# end
+
+#puts "#{User.count} users were created"
+
 
 
 
