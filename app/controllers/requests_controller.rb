@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-   # skip_before_action :authenticate_user!, only: [:new, :create, :index, :show]
+  skip_before_action :authenticate_user!, only: [:new, :create, :index, :show]
 
   def index
     @requests = Request.all
@@ -33,7 +33,7 @@ class RequestsController < ApplicationController
   def update
     @request = Request.find(params[:id])
     if @request.update(requests_params)
-      redirect_to dashboard_path
+      redirect_to requests_path
     else
       render :new
     end
@@ -41,14 +41,13 @@ class RequestsController < ApplicationController
 
   def destroy
     @request = Request.find(params[:id])
-    @user = User.find(params[:user_id])
-    @request.delete
-    # redirect_to user_path(@user)
+    @request.destroy
+    redirect_to requests_path
   end
 
   private
 
   def requests_params
-    params.require(:request).permit(:date, :start_time, :meeting_point, :message)
+    params.require(:request).permit(:date, :start_time, :end_time, :meeting_point, :message)
   end
 end

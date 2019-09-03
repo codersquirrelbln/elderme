@@ -1,15 +1,32 @@
-
+<style>
+  .container {
+    width: 50%;
+    height: 500px;
+  }
+  .save-cancel {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+<br><br>
+<%= link_to "Back", requests_path, class: 'btn btn-primary'%>
 <h1>Edit Request</h1>
 
-<%= link_to "Back", requests_path(@request), class: 'btn btn-primary'%>
 
-<p>15.9.2019</p>
-<p>16:00-18:30</p>
+<div class="container">
+<%= simple_form_for @request do |f| %>
+  <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+  <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"}%>
+  <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"} %>
+  <%= f.input :meeting_point %>
+  <!-- filled in automatically? -->
+  <label>Message</label>
+  <%= f.input :message %>
+  <%= f.submit "Save", id: 'sweet-alert-edit', class: 'btn btn-primary alert'%>
+  <div class="save-cancel">
+<% end %>
 
-<p>Meeting with: Hannah Schulz</p>
 
-
-
-<%= link_to "Save", requests_path, class: 'btn btn-primary'%>
 <%= link_to "Cancel", request_path, class: 'btn btn-primary'%>
-
+</div>
+</div>

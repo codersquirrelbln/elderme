@@ -3,6 +3,7 @@ import "flatpickr/dist/flatpickr.min.css"
 
 function initializeFlatpickr() {
   flatpickr(".datepicker", {
+<<<<<<< HEAD
     minDate: "today",
     altInput: true,
     altFormat: "F j, Y",
@@ -14,16 +15,35 @@ function initializeFlatpickr() {
         }
     ]
   });
+=======
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+
+    // disable: [
+    //     function(date) {
+    //         // disable every multiple of 8
+    //         return !(date.getDate() % 8);
+    //     }
+    // ]
+  });
+
+>>>>>>> master
   flatpickr(".timepicker", {
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
+<<<<<<< HEAD
+=======
+    minDate: "today",
+>>>>>>> master
   });
 }
 
 export default initializeFlatpickr;
 
 
+<<<<<<< HEAD
 // confirm
 // {
 //     "enableTime": true,
@@ -98,3 +118,11 @@ export default initializeFlatpickr;
 //   });
 // }
 
+=======
+// flatpickr('.datetime', {
+//   enableTime: true,
+//   dateFormat: 'Z',
+//   altInput: true,
+//   altFormat: 'Y-m-d h:i K'
+// });
+>>>>>>> master
