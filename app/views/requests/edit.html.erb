@@ -21,8 +21,8 @@
   <!-- filled in automatically? -->
   <label>Message</label>
   <%= f.input :message %>
+  <%= f.submit "Save", id: 'sweet-alert-edit', class: 'btn btn-primary alert'%>
   <div class="save-cancel">
-  <%= f.submit "Save", {data: { confirm: "Are you sure?" }, class: 'btn btn-primary'}%>
 <% end %>
 
 
