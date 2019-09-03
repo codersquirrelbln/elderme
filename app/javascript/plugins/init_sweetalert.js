@@ -10,4 +10,6 @@ const initSweetalert = (selector, options = {}, callback = () => {}) => {
   }
 };
 
+
+
 export { initSweetalert };

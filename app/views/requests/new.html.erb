@@ -17,15 +17,14 @@
   <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"}%>
   <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"} %>
   <%= f.input :meeting_point %>
-  <!-- filled in automatically? -->
   <label>Message</label>
   <%= f.text_field :message %>
   <div class="butu">
-  <%= f.submit "Create Request", id: 'sweet-alert', class: 'btn btn-primary alert' %>
+  <%= f.submit "Create Request", id: 'sweet-alert', class: 'btn btn-primary new-request' %>
+  <%= f.submit "Create hidden", class: 'btn btn-primary alert new-request d-none' %>
 <% end %>
 <%= link_to "Cancel", profile_path(@volunteer), class: 'btn btn-primary'%>
 </div>
 </div>
-
 
 
