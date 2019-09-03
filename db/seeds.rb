@@ -17,6 +17,8 @@ require 'faker'
 #   Interest.create(title:i)
 # end
 
+
+
 cinema = Interest.create(title: "Cinema")
 theatre = Interest.create(title: "Theatre")
 eating = Interest.create(title: "Eating")
