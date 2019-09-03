@@ -12,7 +12,7 @@ alert();
 
 const path = window.location.pathname
 const user_id = path.split("/")[2]
-console.log(user_id)
+// console.log(user_id)
 initSweetalert('#sweet-alert', {
   title: "Wonderful!",
   html: `Your message has been sent`,
@@ -29,9 +29,9 @@ initSweetalert('#sweet-alert', {
 
 initSweetalert('#sweet-alert-edit', {
   title: "Wonderful!",
-  html: `Your request has been updated <a href = "/requests", "method: post"><button class = "btn btn-primary"> OK </button></a>`,
+  html: `Your request has been updated`,
   icon: "success",
-  showConfirmButton: false,
+  showConfirmButton: true,
   }, (value) => {
   if (value) {
     const link = document.querySelector('.alert');

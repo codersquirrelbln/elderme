@@ -1,5 +1,0 @@
-const alert = () => {
-
-};
-
-export { alert }
