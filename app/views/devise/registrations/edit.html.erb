@@ -1,7 +1,23 @@
+<style>
+  .form-actions {
+  display: flex;
+  justfiy-content: center;
+  padding: 10px;
+  margin: 15px;
+}
+
+.btn {
+  width: 150px;
+}
+
+#btn {
+  width: 175px;
+}
+</style>
 <h2 class="h2">Edit Profile</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
-
+        <div><%= link_to "Back", profiles_path, class: 'btn btn-primary' %></div>
 <div container_up>
   <div class="form-inputs">
     <div class="Volunteer">
@@ -45,13 +61,8 @@
                   input_html: { autocomplete: "current-password" } %>
 
     <div class="form-actions">
-      <div class="sub">
-        <%=  f.button :submit, "Update" %>
-      </div>
-      <div class="sub1">
-        <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-      </div>
-        <%= link_to "Back", profiles_path %>
+        <div><%=  f.button :submit, "Update", class: 'btn btn-primary' %></div>
+        <div><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-primary', id: 'btn' %></div>
     </div>
   </div>
 <% end %>
