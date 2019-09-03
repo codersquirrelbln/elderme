@@ -1,14 +1,16 @@
 <h1>Our selection of volunteers</h1>
 
 
+
 <% @interests %>
 
 
 
 <div class ="index-wrapper-1">
    <div class="container">
-
-
+    <h3>Click on one or several activities :</h3>
+    <div class="row circle-activities-container">
+      <div class="col-sm-12 col-md-4 col-lg-12">
   <%= form_tag profiles_path, method: :get do %>
    <% @interests.each do |interest| %>
     <label class="circle-activities">
@@ -20,8 +22,7 @@
   <%#= collection_select :title, :id, Interest.all, :id, :title %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-
-<!--        <div class="col-sm-12 col-md-4 col-lg-12">
+<!--
         <div class="activities-tile">
           <i class="fas fa-film fa-5x circle-icon fa-border" id="pastille-cine"></i>Cinema
           <i class="fas fa-theater-masks fa-5x circle-icon fa-border" id="pastille-theatre"></i>Theatre
@@ -31,7 +32,9 @@
           <i class="fas fa-walking fa-5x circle-icon fa-border"></i>Outdoors
         </div>
       </div>
- -->    </div>
+ -->
+      </div>
+    </div>
   </div>
 </div>
 
