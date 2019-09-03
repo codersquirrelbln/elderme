@@ -1,17 +1,15 @@
 import "bootstrap";
 import initializeFlatpickr from "../plugins/flatpickr";
 import { initSweetalert } from '../plugins/init_sweetalert';
-import { alert } from '../plugins/sweet_alert';
 import "flatpickr/dist/flatpickr.min.css"; // Note this is important!
 import '../components/interest_tiles_selection.js';
 
 
 initializeFlatpickr();
 initSweetalert();
-alert();
 
-const path = window.location.pathname
-const user_id = path.split("/")[2]
+// const path = window.location.pathname
+// const user_id = path.split("/")[2]
 // console.log(user_id)
 initSweetalert('#sweet-alert', {
   title: "Wonderful!",
@@ -26,8 +24,7 @@ initSweetalert('#sweet-alert', {
   }
 });
 
-
-initSweetalert('#sweet-alert-edit', {
+initSweetalert('#sweet-alert-save', {
   title: "Wonderful!",
   html: `Your request has been updated`,
   icon: "success",
