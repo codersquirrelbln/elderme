@@ -15,6 +15,9 @@
 # interests.each do |i|
 #   Interest.create(title:i)
 # end
+User.destroy_all
+Interest.destroy_all
+
 
 UserInterest.destroy_all
 Request.destroy_all
@@ -27,6 +30,7 @@ eating = Interest.create(title: "Eating")
 tea_time = Interest.create(title: "Tea Time")
 playing = Interest.create(title: "Playing")
 outdoors = Interest.create(title: "Outdoors")
+
 
 
 volunteer1 = User.create(

@@ -39,6 +39,7 @@
 
 
 <div class ="home-wrapper-2">
+
 <div class="container">
   <div class="row">
       <% @volunteers.each do |volunteer| %>
@@ -66,15 +67,21 @@
             <%#= volunteer.title %>
             <%# end %>
 
+            <br>
+            <br>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
 
 
-            </div>
+
             <%= link_to "MY PROFILE", profile_path(volunteer), class: "btn btn-primary button-action-profile" %>
+
           </div>
         </div>
       <% end %>
-      </div>
     </div>
   </div>
-</div>
 </div>
