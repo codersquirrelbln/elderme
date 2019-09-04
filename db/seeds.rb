@@ -12,7 +12,6 @@
 #Interest.destroy_all
 
 # interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
-
 # interests.each do |i|
 #   Interest.create(title:i)
 # end
