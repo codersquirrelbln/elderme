@@ -1,5 +1,4 @@
 class ProfilesController < ApplicationController
-
   def index
     @interests = Interest.all
 
