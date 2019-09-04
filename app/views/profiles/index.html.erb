@@ -2,7 +2,7 @@
 <% @interests %>
 <div class ="index-wrapper-1">
    <div class="container">
-    <h3>Click on one or several activities :</h3>
+    <h3>What do you want to do ?</h3>
     <div class="row circle-activities-container">
       <div class="col-sm-12 col-md-4 col-lg-12">
   <%= form_tag profiles_path, method: :get do %>
@@ -10,6 +10,9 @@
     <label class="circle-activities">
         <% asset_url = "#{interest.title}.svg"%>
         <%= image_tag(asset_url, width: 85, height:85) %>
+
+        <p><%= interest.title %></p>
+
       <%= check_box_tag('interests[]', interest.id, checked=false, hidden:true, class:"check-me") %>
     </label>
   <% end %>

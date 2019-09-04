@@ -29,9 +29,19 @@
 
   .circle-activities:hover{
     cursor: pointer;
+    color: #48ACF0;
+    box-shadow: 0 0 2px 4px #48ACF0;
+
   }
+
+  //.image_tag:hover{
+  // color: #48ACF0;
+  //}
+
 .circle-activities-selected:hover{
     cursor: pointer;
+    animation: bounce 0.8s;
+
   }
   .circle-activities-selected {
     background: #F2D86F;
@@ -44,9 +54,7 @@
     padding: 30px;
     margin-bottom: 30px;
     margin: 20px;
-
   }
-
 }
 
 .icone-card {
@@ -63,4 +71,37 @@
   box-shadow: 3px 3px 10px #554d4d30
 }
 
+p{
+      margin-top: -47px;
+      font-weight: bold;
+    }
+
+.text-wrapper{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
 
