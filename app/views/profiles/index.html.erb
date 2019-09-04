@@ -39,22 +39,33 @@
 
 
 <div class ="home-wrapper-2">
-  <div class="container">
-    <div class="row">
-      <% @users.each do |user| %>
-        <div class="col-12 col-sm-6 col-md-4 mb-3">
-          <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
-            <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
-            <h2><%= user.first_name %></h2>
-            <h2><%= user.last_name %></h2>
-            <div class="d-flex justify-content-center">
-              <% user.interests.each do |inter| %>
-              <% asset_url = "#{inter.title}.svg"%>
-              <div class="icone-card">
-                <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
+
+<div class="container">
+  <div class="row">
+      <% @volunteers.each do |volunteer| %>
+    <div class="col-12 col-sm-6 col-md-4 mb-3">
+      <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+        <div>
+        <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
+        </div>
+
+              <h2><%= volunteer.first_name %></h2>
+              <h2><%= volunteer.last_name %></h2>
+              <div class="d-flex justify-content-center">
+                <% volunteer.interests.each do |inter| %>
+                <% asset_url = "#{inter.title}.svg"%>
+                  <div class="icone-card">
+                   <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
+                  </div>
+                <% end %>
               </div>
-              <% end %>
+           <br><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i>
+            <div class="icones">
+
             </div>
+            <%# if volunteer.volunteer_interests.present? %>
+            <%#= volunteer.title %>
+            <%# end %>
 
             <br>
             <br>
@@ -65,7 +76,9 @@
             <i class="fas fa-star fa-2x"></i>
 
 
-            <%= link_to "MY PROFILE", profile_path(user), class: "btn btn-primary button-action-profile" %>
+
+            <%= link_to "MY PROFILE", profile_path(volunteer), class: "btn btn-primary button-action-profile" %>
+
           </div>
         </div>
       <% end %>

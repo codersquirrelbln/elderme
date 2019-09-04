@@ -9,6 +9,6 @@ class AdditionalInfoUser < ActiveRecord::Migration[5.2]
     add_column :users, :age, :integer
     add_column :users, :mobility, :boolean
     add_column :users, :biography, :text
-    add_column :users, :senior, :boolean
+    add_column :users, :senior, :boolean, default: true
   end
 end

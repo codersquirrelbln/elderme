@@ -7,4 +7,9 @@ class User < ApplicationRecord
   has_many :interests, through: :user_interests
   has_many :requests_as_asker, source: :requests, foreign_key: :senior_id
   has_many :requests_as_receiver, source: :requests, foreign_key: :volunteer_id
+
+  def make_volunteer
+    self.senior = false
+    self.save
+  end
 end
