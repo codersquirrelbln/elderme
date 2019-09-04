@@ -130,7 +130,8 @@ h2 {
     <div class="col-5">
       <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
         <div>
-      <div class ="photo-profile1" style="background-image: url('<%= cl_image_path(@volunteer.picture) %>')"></div>
+          <div class ="photo-profile1" style="background-image: url('<%= cl_image_path(@volunteer.picture) %>')">
+          </div>
             <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
             <ul>
             <li><%= @volunteer.city %></li>
