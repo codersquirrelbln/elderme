@@ -1,4 +1,18 @@
 .simple-calendar {
+  a {
+    font-size: 35px;
+    color: #48ACF0;
+  }
+
+  .event-tag {
+    color: #48ACF0;
+    font-size: 25px;
+  }
+
+  .calendar-title {
+    font-size: 35px;
+  }
+
   table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
@@ -23,6 +37,7 @@
     border-top: 0px none rgb(51, 51, 51);
     box-sizing: border-box;
     text-align: left;
+    font-size: 30px;
   }
 
   td {
@@ -46,7 +61,8 @@
   }
 
   .day {
-    height: 80px;
+    height: 200px;
+    font-size: 30px;
   }
 
   .wday-0 {}
@@ -58,7 +74,8 @@
   .wday-6 {}
 
   .today {
-    background: #FFFFC0;
+    background: #F2D86F;
+
   }
 
   // #48ACF0 blue
@@ -75,11 +92,11 @@
     background: #DDD;
   }
   .current-month {
-    font-size: 15px;
+    font-size: 35px;
     font-weight: bold;
   }
 
   .has-events {
-
+    background-color: pink;
   }
 }
