@@ -130,12 +130,12 @@ h2 {
     <div class="col-5">
       <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
         <div>
-      <div class ="photo-profile1" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
-            <h2><%= @user.first_name %>  <%= @user.last_name %></h2>
+      <div class ="photo-profile1" style="background-image: url('<%= cl_image_path(@volunteer.picture) %>')"></div>
+            <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
             <ul>
-            <li><%= @user.city %></li>
-            <li><%= @user.age %> Years old</li>
-            <li><%= @user.mobility %></li>
+            <li><%= @volunteer.city %></li>
+            <li><%= @volunteer.age %> Years old</li>
+            <li><%= @volunteer.mobility %></li>
           </ul>
             <div class="icones">
             <i class="fas fa-dice fa-border fa-2x"></i> <i class="fas fa-utensils fa-border fa-2x"></i> <i class="fas fa-theater-masks fa-border fa-2x" ></i>
@@ -143,11 +143,11 @@ h2 {
             </div>
             <br>
             <div class="biography">
-            <p><%= @user.biography %></p>
+            <p><%= @volunteer.biography %></p>
 
           </div>
         <div class="send">
-              <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary' %>
+              <%= link_to "Send message", new_user_request_path(@volunteer), class: 'btn btn-primary' %>
               </div>
 
         </div>
@@ -163,62 +163,11 @@ h2 {
           <video>Video</video>
         </div>
          <div class="watch">
-              <%= link_to "Watch", new_user_request_path(@user), class: 'btn btn-primary' %>
+              <%= link_to "Watch", new_user_request_path(@volunteer), class: 'btn btn-primary' %>
               <%= link_to "Pause", profiles_path, class: 'btn btn-primary'%></div>
        </div>
        </div>
     </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--div class="row">
- <div class="col-1">
-  </div>
-  <div class="col-sm-5">
-    <div class="card-volunteer1" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
-        <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></p></div>
-            <h2><%= @user.first_name %>  <%= @user.last_name %></h2>
-            <ul>
-            <li><%= @user.city %></li>
-            <li><%= @user.age %></li>
-            <li><%= @user.mobility %></li>
-          </ul>
-            <div class="info">
-            <li><%= @user.biography %></li>
-            <!-- <p>I love walking my dog and going to the Stadium to watch Fussball</p> -->
-
-    <!--div class="col-6">
-      <div class="interest-wrapper" style="width: 500px">
-
-        <% @user.interests.each do |interest| %>
-          <div class="inter-item">
-            <%= interest.title %>
-          </div>
-        <% end %>
-      </div>
-    </div>
- </div>
-</div>
-<div class="container container-buttons d-flex justify-content-center">
-  <div class="send">
-    <%= link_to "Send message", new_user_request_path(@user), class: 'btn btn-primary' %>
-   <%= link_to "Back", profiles_path, class: 'btn btn-primary'%>
-
-  </div>
-
 
 
 

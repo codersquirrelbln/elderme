@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
     @interests = Interest.all
 
     if params[:interests].present?
-      @users = User.includes(user_interests: :interest).where(interests: { id: params[:interests]})
+      @volunteers = User.where(senior: false).includes(user_interests: :interest).where(interests: { id: params[:interests]})
       # users = User.all
       # users.each do |user|
       #   user.user_interests.each do |interest|
@@ -13,12 +13,11 @@ class ProfilesController < ApplicationController
       # end
 
     else
-      @users = User.all
-
+      @volunteers = User.where(senior: false)
     end
   end
 
   def show
-    @user = User.find(params[:id])
+    @volunteer = User.find(params[:id])
   end
 end
