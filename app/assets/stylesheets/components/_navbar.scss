@@ -32,7 +32,7 @@
   .navbar-nav {
     color: black;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
   }
 
   a.nav-link {
@@ -44,7 +44,13 @@
   background: #F4F4F4;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 
+//#navhome{
+//  background: #F3E6E4;
+//  top: 0;
+//  width: 100%;
+//}
 
 
