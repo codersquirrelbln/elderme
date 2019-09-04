@@ -27,6 +27,11 @@
     box-shadow: 3px 3px 10px #554d4d30;
   }
 
+  p{
+   margin-top: -47px;
+   font-weight: bold;
+}
+
   .circle-activities:hover{
     cursor: pointer;
     color: #48ACF0;
@@ -70,11 +75,6 @@
   margin: 10px;
   box-shadow: 3px 3px 10px #554d4d30
 }
-
-p{
-      margin-top: -47px;
-      font-weight: bold;
-    }
 
 .text-wrapper{
   color: white;
