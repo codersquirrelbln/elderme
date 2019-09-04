@@ -39,43 +39,45 @@
 
 
 <div class ="home-wrapper-2">
-<div class="container">
-  <div class="row">
+  <div class="container">
+    <div class="row">
       <% @users.each do |user| %>
-    <div class="col-12 col-sm-6 col-md-4 mb-3">
-      <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
-        <div>
-        <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
-
-              <h2><%= user.first_name %></h2>
-              <h2><%= user.last_name %></h2>
-              <div class="d-flex justify-content-center">
-                <% user.interests.each do |inter| %>
-                <% asset_url = "#{inter.title}.svg"%>
-                  <div class="icone-card">
-                   <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
-                  </div>
-                <% end %>
+        <div class="col-12 col-sm-6 col-md-4 mb-3">
+          <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+            <div class ="photo-profile" style="background-image: url('<%= cl_image_path("Photo-Volunteer") %>')"></div>
+            <h2><%= user.first_name %></h2>
+            <h2><%= user.last_name %></h2>
+            <div class="d-flex justify-content-center">
+              <% user.interests.each do |inter| %>
+              <% asset_url = "#{inter.title}.svg"%>
+              <div class="icone-card">
+                <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
               </div>
-
-           <br>
-           <br><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i>
-            <div class="icones">
-
+              <% end %>
             </div>
-            <%# if user.user_interests.present? %>
-            <%#= user.title %>
-            <%# end %>
+
+            <br>
+            <br>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+              <div class="icones">
+                <i class="fas fa-dice fa-border fa-2x"></i>
+                <i class="fas fa-utensils fa-border fa-2x"></i>
+                <i class="fas fa-theater-masks fa-border fa-2x" ></i>
+              </div>
+                <%# if user.user_interests.present? %>
+                <%#= user.title %>
+                <%# end %>
 
 
 
-            </div>
             <%= link_to "MY PROFILE", profile_path(user), class: "btn btn-primary button-action-profile" %>
           </div>
         </div>
       <% end %>
-      </div>
     </div>
   </div>
-</div>
 </div>
