@@ -16,14 +16,41 @@
 
       <div class="event">
         <% request.each do |r| %>
-            <%= link_to request_path(r) do %>
+            <%= link_to request_path(r), "data-toggle" => "modal", "data-target" => "#request-modal-#{r.id}" do %>
               <div class="event-tag">
                   <%= r.start_time.strftime("%l:%M -")%>
                   <%= r.end_time.strftime("%l:%M") %>
               </div>
             <% end %>
+            <!-- Modal -->
+            <div class="modal fade" id="request-modal-<%= r.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <%= render "request", request: r %>
+                  </div>
+                </div>
+              </div>
+            </div>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
