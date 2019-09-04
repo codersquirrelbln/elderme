@@ -4,5 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
-
+  def search
+    @interests = Interest.all
+  end
 end

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
-
-
+  get "search", to: "pages#search"
 
   resources :profiles, only: [:show, :index]
   resources :users, only: [] do
