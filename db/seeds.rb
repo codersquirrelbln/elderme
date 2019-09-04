@@ -16,6 +16,9 @@ require 'faker'
 # interests.each do |i|
 #   Interest.create(title:i)
 # end
+User.destroy_all
+Interest.destroy_all
+
 
 
 
@@ -27,7 +30,7 @@ playing = Interest.create(title: "Playing")
 outdoors = Interest.create(title: "Outdoors")
 
 
-volunteer1 = User.create(
+volunteer1 = User.create!(
   first_name: "Bob",
   last_name: "Bobbington",
   email:"b.bobbington@example.com",
