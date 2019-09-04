@@ -5,14 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
+# require 'faker'
 
 #User.destroy_all
 # p "destroying all users"
 #Interest.destroy_all
 
 # interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
-
 # interests.each do |i|
 #   Interest.create(title:i)
 # end
@@ -21,8 +20,6 @@ UserInterest.destroy_all
 Request.destroy_all
 Interest.destroy_all
 User.destroy_all
-
-
 
 cinema = Interest.create(title: "Cinema")
 theatre = Interest.create(title: "Theatre")
@@ -42,7 +39,6 @@ volunteer1 = User.create(
   biography: "I love listening to classical music, going to the theater and drink tea.",
   picture: "elisa_burghard_weq8mq"
   )
-
 volunteer1.interests = [outdoors, tea_time]
 volunteer1.save
 
@@ -56,7 +52,6 @@ volunteer2 = User.create(
   biography: "I love listening to rock music, going to the movies and play cards (bridge).",
   picture: "carl_bentham_buphku",
   senior: false
-
   )
 volunteer2.interests = [cinema, eating, playing]
 volunteer2.save
@@ -72,7 +67,6 @@ volunteer3 = User.create(
   picture: "camille_de_peretti_nkgd9a",
   senior: false
   )
-
 volunteer3.interests = [outdoors, tea_time, eating]
 volunteer3.save
 
@@ -90,7 +84,6 @@ volunteer4 = User.create(
 volunteer4.interests = [theatre, playing, outdoors, tea_time]
 volunteer4.save
 
-
 volunteer5 = User.create(
   first_name: "Yann",
   last_name: "Parent",
@@ -107,7 +100,7 @@ volunteer5.save
 
 volunteer6 = User.create(
   first_name: "Juan Carlos",
-  last_name: "Limon Flores",
+  last_name: "Limo-Flores",
   email: "JL@example.com",
   password: "123456",
   age: 19,
@@ -119,10 +112,6 @@ volunteer6 = User.create(
 volunteer6.interests = [eating, playing, outdoors, tea_time]
 volunteer6.save
 
-
-
-
-
 volunteer7 = User.create(
   first_name: "Sadie",
   last_name: "Bolsom",
@@ -133,7 +122,6 @@ volunteer7 = User.create(
   biography: "I love listening to classical music, going to the theater and drink tea.",
   picture: "sadie_bolsom_vsk7uw"
   )
-
 volunteer7.interests = [outdoors, tea_time]
 volunteer7.save
 
@@ -147,7 +135,6 @@ volunteer8 = User.create(
   biography: "I love listening to rock music, going to the movies and play cards (bridge).",
   picture: "malina_steinberg_lmfrqe",
   senior: false
-
   )
 volunteer8.interests = [cinema, eating, playing]
 volunteer8.save
@@ -163,7 +150,6 @@ volunteer9 = User.create(
   picture: "monther_al_gbawi_j4vsvz",
   senior: false
   )
-
 volunteer9.interests = [outdoors, tea_time, eating]
 volunteer9.save
 
@@ -180,7 +166,6 @@ volunteer10 = User.create(
   )
 volunteer10.interests = [theatre, playing, outdoors, tea_time]
 volunteer10.save
-
 
 volunteer11 = User.create(
   first_name: "Jürgen",
@@ -210,11 +195,13 @@ volunteer12 = User.create(
 volunteer12.interests = [eating, playing, outdoors, tea_time]
 volunteer12.save
 
+
+
+
+
+
 # user1 = User.create(
 #   email: "example@example.com"
-
-
-
 #   t.string "phone_number"
 
 #   t.boolean "mobility"
@@ -256,11 +243,3 @@ volunteer12.save
 # end
 
 #puts "#{User.count} users were created"
-
-
-
-
-
-
-
-
