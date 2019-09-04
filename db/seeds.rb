@@ -119,6 +119,97 @@ volunteer6 = User.create(
 volunteer6.interests = [eating, playing, outdoors, tea_time]
 volunteer6.save
 
+
+
+
+
+volunteer7 = User.create(
+  first_name: "Sadie",
+  last_name: "Bolsom",
+  email:"sb@example.com",
+  password: "123456",
+  age: 35,
+  gender: "female",
+  biography: "I love listening to classical music, going to the theater and drink tea.",
+  picture: "sadie_bolsom_vsk7uw"
+  )
+
+volunteer7.interests = [outdoors, tea_time]
+volunteer7.save
+
+volunteer8 = User.create(
+  first_name: "Malina",
+  last_name: "Steinberg",
+  email:"ms@example.com",
+  password: "123456",
+  age: 32,
+  gender: "female",
+  biography: "I love listening to rock music, going to the movies and play cards (bridge).",
+  picture: "malina_steinberg_lmfrqe",
+  senior: false
+
+  )
+volunteer8.interests = [cinema, eating, playing]
+volunteer8.save
+
+volunteer9 = User.create(
+  first_name: "Monther",
+  last_name: "Al Gbawi",
+  email:"mg@example.com",
+  password: "123456",
+  age: 25,
+  gender: "male",
+  biography: "I love sitting in the park and watch birds, or play table games like Mahjongg or chess.",
+  picture: "monther_al_gbawi_j4vsvz",
+  senior: false
+  )
+
+volunteer9.interests = [outdoors, tea_time, eating]
+volunteer9.save
+
+volunteer10 = User.create(
+  first_name: "Sergio",
+  last_name: "Pinto",
+  email: "sp@example.com",
+  password: "123456",
+  age: 29,
+  gender: "male",
+  biography: "I love goingt to the football stadium to see my favorite team - Hertha BSC - play. I like reading books and drinking coffee",
+  picture: "segior_pinto_bz4jun",
+  senior: false
+  )
+volunteer10.interests = [theatre, playing, outdoors, tea_time]
+volunteer10.save
+
+
+volunteer11 = User.create(
+  first_name: "Jürgen",
+  last_name: "Nguyen",
+  email:"jn@example.com",
+  password: "123456",
+  age: 31,
+  gender: "male",
+  biography: "I love cooking and going to the theater or the movies.",
+  picture: "Juergen_Nguyen_aucjfe",
+  senior: false
+  )
+volunteer11.interests = [cinema, tea_time]
+volunteer11.save
+
+volunteer12 = User.create(
+  first_name: "Victor",
+  last_name: "Menge",
+  email: "vm@example.com",
+  password: "123456",
+  age: 19,
+  gender: "male",
+  biography: "I like going to the movies.",
+  picture: "victor_menge_oxtwmy",
+  senior: false
+  )
+volunteer12.interests = [eating, playing, outdoors, tea_time]
+volunteer12.save
+
 # user1 = User.create(
 #   email: "example@example.com"
 
