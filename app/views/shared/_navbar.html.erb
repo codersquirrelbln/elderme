@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="logo-elderme">
-      <a href="" metatag = "Searchpage">
-        <%= link_to profiles_path, class: 'navbar-brand' do %>
+      <a href="" metatag = "Homepage">
+        <%= link_to root_path, class: 'navbar-brand' do %>
           <%= image_tag "logo v7.png" %>
         <% end %>
       </a>
@@ -18,13 +18,19 @@
       <% if user_signed_in? %>
         <li class="nav-item active">
           <i class="far fa-comment-dots"></i>
-          <%= link_to "Messages", requests_path, class: 'nav-link' %>
+          <a href="" metatatg="Calendar">
+            <%= link_to "Calendar", requests_path, class: 'nav-link' %>
+          </a>
         </li>
         <li class="nav-item">
           <i class="far fa-user-circle"></i>
-          <%= link_to "Profile", edit_user_registration_path, class: 'nav-link' %>
+          <a href="" metatag="My Profile">
+            <%= link_to "My Profile", edit_user_registration_path, class: 'nav-link' %>
+          </a>
         </li>
-        <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "dropdown-item"  %>
+        <a href="" metatag="Logout">
+          <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "dropdown-item"  %>
+        </a>
       <% else %>
 
         <li class="nav-item signup">
