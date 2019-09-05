@@ -21,6 +21,7 @@ volunteer1 = User.create(
   biography: "I love listening to classical music, going to the theater and drink tea.",
   picture: "elisa_burghard_weq8mq",
   video: "",
+  senior: false,
   review: 4
   )
 volunteer1.interests = [outdoors, tea_time]
@@ -37,7 +38,7 @@ volunteer2 = User.create(
   picture: "carl_bentham_buphku",
   senior: false,
   video: "",
-  review: 4
+  review: 3
   )
 volunteer2.interests = [cinema, eating, playing]
 volunteer2.save
@@ -53,7 +54,7 @@ volunteer3 = User.create(
   picture: "camille_de_peretti_nkgd9a",
   senior: false,
   video: "https://www.youtube.com/embed/UArjj6dtuQM",
-  review: 4
+  review: 5
   )
 volunteer3.interests = [outdoors, tea_time, eating]
 volunteer3.save
@@ -69,7 +70,7 @@ volunteer4 = User.create(
   picture: "max_synnott_tb1kxg",
   senior: false,
   video: "",
-  review: 4
+  review: 2
   )
 volunteer4.interests = [theatre, playing, outdoors, tea_time]
 volunteer4.save
@@ -117,7 +118,7 @@ volunteer7 = User.create(
   picture: "sadie_bolsom_vsk7uw",
   senior: false,
   video: "",
-  review: 4
+  review: 3
   )
 volunteer7.interests = [outdoors, tea_time]
 volunteer7.save
@@ -125,7 +126,7 @@ volunteer7.save
 volunteer8 = User.create(
   first_name: "Malina",
   last_name: "Steinberg",
-  email:"ms@example.com",
+  email:"mstein@example.com",
   password: "123456",
   age: 32,
   gender: "female",
@@ -133,10 +134,10 @@ volunteer8 = User.create(
   picture: "malina_steinberg_lmfrqe",
   senior: false,
   video: "",
-  review: 4
+  review: 5
   )
 volunteer8.interests = [cinema, eating, playing]
-volunteer8.save
+volunteer8.save!
 
 volunteer9 = User.create(
   first_name: "Monther",
@@ -165,7 +166,7 @@ volunteer10 = User.create(
   picture: "segior_pinto_bz4jun",
   senior: false,
   video: "",
-  review: 4
+  review: 2
   )
 volunteer10.interests = [theatre, playing, outdoors, tea_time]
 volunteer10.save
@@ -181,7 +182,7 @@ volunteer11 = User.create(
   picture: "Juergen_Nguyen_aucjfe",
   senior: false,
   video: "",
-  review: 4
+  review: 2
   )
 volunteer11.interests = [cinema, tea_time]
 volunteer11.save

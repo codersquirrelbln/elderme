@@ -2,7 +2,8 @@ class Request < ApplicationRecord
   belongs_to :senior, class_name: 'User'
   belongs_to :volunteer, class_name: 'User'
   validates :start_time, presence: true
-  # validates date
+  validates :date, presence: true
+  validates :meeting_point, presence: true
 
   def formatted_start
     return "" unless start_time&.present?

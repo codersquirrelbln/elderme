@@ -1,15 +1,13 @@
 <style>
  .container-info-profile {
-   margin-left: 2px;
-   margin-right: 2px;
-   width: 100%;
-   margin-top: 5px;
+   margin: 0 auto;
+   width: 90%;
  }
 
 .home-wrapper-3 .card-volunteer1 {
  overflow: hidden;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- border-radius: 15px;
+ box-shadow: 0 0 4px rgba(0,0,0,0.1);
+ border-radius: 12px;
  padding: 5px;
  text-align: center;
  background-repeat: no-repeat !important;
@@ -19,14 +17,23 @@
  margin-left: auto;
  min-height: 653px;
  float: left;
- min-width: 605px;
-
+ min-width: 505px;
 }
 
 .card-volunteer1 h1 {
  font-size: 16px;
  font-weight: bold;
  margin: 0;
+}
+
+.age {
+  margin-right: 43px;
+  font-weight: bold;
+}
+
+.fas.fa-star{
+  color: #EB9486;
+  margin-right: 47px;
 }
 
 .photo-profile1 {
@@ -37,7 +44,7 @@
  border-radius:50%;
  border: 4px solid white;
  background-size: cover;
- margin-top : 20px;
+ margin-top : 40px;
 }
 
 .photo-profile1 img {
@@ -86,7 +93,7 @@ h2 {
 }
 
  #send {
-   margin-top: -10px;
+   margin-top: -45px;
    width: 290px;
    padding: 10px;
  }
@@ -111,7 +118,11 @@ h2 {
  }
 
  #back-btn {
-   margin-top: 30px;
+   /*margin-top: 30px;*/
+   height: 39px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .row {
@@ -123,18 +134,35 @@ h2 {
 
 .icone-card {
   display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
+
 ul li {
   color: black;
   text-align: center;
   list-style: none;
 }
+
+  .biography {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -75px;
+  }
+
+  .no-video {
+    margin-top: 85px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 </style>
 
 <div class ="home-wrapper-3">
 
  <div class="container-info-profile">
-   <%= link_to "Back", profiles_path, class: 'btn btn-primary', id: 'back-btn'%>
+   <%= link_to "Back", profiles_path, class: 'btn btn-primary button-action', id: 'back-btn'%>
    <div class="row">
      <div class="col-5">
        <div class="card-volunteer1" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
@@ -143,7 +171,7 @@ ul li {
            <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
            <ul>
              <li><%= @volunteer.city %></li>
-             <li><%= @volunteer.age %> Years old</li>
+             <li class="age"><%= @volunteer.age %> Years </li>
              <li><%= @volunteer.mobility %></li>
            </ul>
                 <% @volunteer.interests.each do |interest|  %>
@@ -152,20 +180,35 @@ ul li {
                     <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
                   </div>
                 <% end %>
+              <ul>
+                <li ><% (@volunteer.review).times do %>
+                  <i class="fas fa-star fa-2x"></i>
+                  <% end %>
+                  <% (5 - @volunteer.review).times do %>
+                    <i class="fas fa-star fa-2x grey-star"></i>
+                  <% end %>
+                </li>
+              </ul>
 
                 <br><br><br><br>
            <div class="biography">
              <p>"<%= @volunteer.biography %>"</p>
            </div>
+
          <div class="send">
         <%= link_to "Send message", new_user_request_path(@volunteer), class: 'btn btn-primary button-action', id: 'send' %>
          </div>
        </div>
      </div>
      <div class="col-7" id="video-container">
-       <div style=" padding-top:30px; height:634; overflow:hidden;">
-         <iframe  width="415" src="<%= @volunteer.video %>" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-       </div>
+      <%  if @volunteer.video == "" %>
+        <img src="https://res.cloudinary.com/dmuxhwwrg/image/upload/v1567690581/no_video_d6vhyn.jpg" alt="no-signal-available" class="no-video">
+      <% else %>
+        <div style=" padding-top:30px; height:634; overflow:hidden;">
+          <iframe  width="415" src="<%= @volunteer.video %>" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          </iframe>
+        </div>
+      <% end %>
      </div>
    </div>
  </div>

@@ -1,41 +1,53 @@
-<%= link_to "Back", search_path, class: 'btn btn-primary', id:"back-btn"%>
-<h1>Pick your volunteer !</h1>
-  <div class ="home-wrapper-2">
-    <div class="container">
-        <div class="row">
-          <% @volunteers.each do |volunteer| %>
-          <div class="col-12 col-sm-6 col-md-4 mb-3">
-          <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
-          <div>
-          <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
-          </div>
-              <h2><%= volunteer.first_name %></h2>
-              <div class="d-flex justify-content-center">
-                <% volunteer.interests.each do |inter| %>
-                <% asset_url = "#{inter.title}.svg"%>
-                  <div class="icone-card">
-                   <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
-                  </div>
-                <% end %>
-              </div>
-                <br><i class="fas fa-star fa-2x"></i>
-                <i class="fas fa-star fa-2x"></i>
-                <i class="fas fa-star fa-2x"></i>
-                <i class="fas fa-star fa-2x"></i>
-                <i class="fas fa-star fa-2x"></i>
-            <%# if volunteer.volunteer_interests.present? %>
-            <%#= volunteer.title %>
-            <%# end %>
-                <br>
-                <br>
-              <a href="" class = "volunteer_profile">
-              <%= link_to "See profile", profile_path(volunteer), class: 'btn btn-primary button-action', id:"profile-button"%>
-              </a>
-             </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
 
-  </div>
-</div>
+<div class ="home-wrapper-2">
+  <div class="container">
+    <div class='d-flex pb-3'>
+      <%= link_to "New Search", search_path, class: 'btn btn-primary button-action', id:"back-btn"%>
+      <h1 class="title-text">Choose your volunteer!</h1>
+    </div>
+    <div class="row">
+      <% @volunteers.each do |volunteer| %>
+      <div class="col-12 col-sm-6 col-md-4 mb-3">
+        <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+          <div>
+            <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
+            </div>
+            <h2><%= volunteer.first_name %></h2>
+            <% volunteer.review.times do %>
+            <i class="fas fa-star fa-2x"></i>
+            <% end %>
+            <% (5 - volunteer.review).times do %>
+            <i class="fas fa-star fa-2x grey-star"></i>
+            <% end %>
+
+            <div class="d-flex justify-content-center icones">
+              <% volunteer.interests.each do |inter| %>
+              <% asset_url = "#{inter.title}.svg"%>
+              <div class="icone-card">
+               <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
+             </div>
+             <% end %>
+           </div>
+
+
+                <!-- <br><i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i> -->
+                <%# if volunteer.volunteer_interests.present? %>
+                <%#= volunteer.title %>
+                <%# end %>
+                <br>
+                <br>
+                <a href="" class = "volunteer_profile">
+                  <%= link_to "See profile", profile_path(volunteer), class: 'btn btn-primary button-action', id:"profile-button"%>
+                </a>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
