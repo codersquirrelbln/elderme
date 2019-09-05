@@ -1,5 +1,10 @@
-<%= link_to "Back", search_path, class: 'btn btn-primary', id:"back-btn"%>
-<h1>Pick your volunteer !</h1>
+
+<div class="form-group">
+  <div class='d-flex'>
+    <%= link_to "Back", search_path, class: 'btn btn-primary', id:"back-btn"%>
+    <h1 class="title-text">Pick your volunteer !</h1>
+  </div>
+</div>
   <div class ="home-wrapper-2">
     <div class="container">
         <div class="row">
@@ -18,11 +23,18 @@
                   </div>
                 <% end %>
               </div>
-                <br><i class="fas fa-star fa-2x"></i>
+
+              <% (volunteer.review).times do %>
+                <i class="fas fa-star fa-2x"></i>
+              <% end %>
+              <% (5 - volunteer.review).times do %>
+                <i class="fas fa-star fa-2x grey-star"></i>
+              <% end %>
+                <!-- <br><i class="fas fa-star fa-2x"></i>
                 <i class="fas fa-star fa-2x"></i>
                 <i class="fas fa-star fa-2x"></i>
                 <i class="fas fa-star fa-2x"></i>
-                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i> -->
             <%# if volunteer.volunteer_interests.present? %>
             <%#= volunteer.title %>
             <%# end %>
