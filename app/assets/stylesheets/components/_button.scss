@@ -1,7 +1,7 @@
 .button-action {
   font-size: 20px;
   border-radius: 50px !important;
-  width: 170px;
+  width: 170px !important;
   height: 50px;
   box-shadow: 5px 5px 15px grey;
   font-weight:bold;
@@ -10,30 +10,54 @@
   color: red;
 }
 .button-action-profile {
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 50px !important;
   width: 170px;
   height: 50px;
   box-shadow: 5px 5px 15px grey;
-  font-weight:bold;
+  font-weight: bold;
   padding: 9px;
   margin-top: 40px;
   padding-top:20px;
 }
 
 #profile-btn{
-  font-size: 20px;
-  margin-top: 50px;
+  font-size:30px;
+  padding: 0px;
+  font-weight: bold;
 
 }
 
 #start-button {
   font-size:30px;
   padding: 0px;
+  font-weight: bold;
+}
+
+#search-button {
+  font-size:30px;
+  padding: 0px;
+  font-weight: bold;
+}
+
+#profile-button {
+  font-size:20px;
+  padding: 9px;
+  font-weight: bold;
+  vertical-align: center;
+  text-align: center;
+  vertical-align: middle;
+  margin: 2 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .button-center{
   margin: 0 auto;
 }
+
+#back-btn {
+   margin-top: 30px;
+ }
 
 
