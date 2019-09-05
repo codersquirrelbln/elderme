@@ -17,7 +17,7 @@
  margin-top: 7px;
  margin-right: auto;
  margin-left: auto;
- height: 600px;
+ min-height: 653px;
  float: left;
 }
 
@@ -104,7 +104,7 @@ h2 {
  margin-top: 7px;
  margin-right: auto;
  margin-left: auto;
- height: 600px;
+ min-height: 655px;
  }
 
  #back-btn {
@@ -148,7 +148,7 @@ ul li {
                 <% end %>
            <br><br><br><br>
            <div class="biography">
-             <p><%= @volunteer.biography %></p>
+             <p>"<%= @volunteer.biography %>"</p>
            </div>
          <div class="send">
         <%= link_to "Send message", new_user_request_path(@volunteer), class: 'btn btn-primary button-action', id: 'send' %>
