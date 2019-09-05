@@ -1,7 +1,7 @@
 
 <div class="requests_new_wrap">
 
-    <h2> Message <%= @volunteer.first_name %> </h2>
+    <h2 class="message-title"> Message <%= @volunteer.first_name %> </h2>
     <%= simple_form_for [@volunteer, @request] do |f| %>
     <div class="form-group">
     <%= f.input :date, as: :string, required: false, wrapper_html: {class: "requests_input"}, input_html: {class: "datepicker"}, placeholder: 'September 01, 2019' %>
@@ -17,7 +17,7 @@
    <%= f.text_field :message, placeholder: "New Message" %>
 
    <div class="butu">
-    <%= f.submit "Sent Message", id: 'sweet-alert', class: 'btn btn-primary new-request' %>
+    <%= f.submit "Send Message", id: 'sweet-alert', class: 'btn btn-primary new-request' %>
     <%= f.submit "Create hidden", class: 'btn btn-primary alert new-request d-none' %>
     <%= link_to "Cancel", profile_path(@volunteer), id:'Cancel'%>
     <% end %>
