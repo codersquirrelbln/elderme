@@ -1,15 +1,13 @@
 <style>
  .container-info-profile {
-   margin-left: 2px;
-   margin-right: 2px;
-   width: 100%;
-   margin-top: 5px;
+   margin: 0 auto;
+   width: 90%;
  }
 
 .home-wrapper-3 .card-volunteer1 {
  overflow: hidden;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- border-radius: 15px;
+ box-shadow: 0 0 4px rgba(0,0,0,0.1);
+ border-radius: 12px;
  padding: 5px;
  text-align: center;
  background-repeat: no-repeat !important;
@@ -120,9 +118,11 @@ h2 {
  }
 
  #back-btn {
-   margin-top: 30px;
+   /*margin-top: 30px;*/
    height: 39px;
-   padding: 6px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .row {
@@ -162,7 +162,7 @@ ul li {
 <div class ="home-wrapper-3">
 
  <div class="container-info-profile">
-   <%= link_to "Back", profiles_path, class: 'btn btn-primary', id: 'back-btn'%>
+   <%= link_to "Back", profiles_path, class: 'btn btn-primary button-action', id: 'back-btn'%>
    <div class="row">
      <div class="col-5">
        <div class="card-volunteer1" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
