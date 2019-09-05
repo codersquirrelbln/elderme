@@ -5,9 +5,9 @@
 <h1>My Meetings</h1>
 
 <div class="simple-calendar">
-  <div class="container">
+  <!-- <div class="container">
     <h2>Next Meeting</h2>
-  </div>
+  </div> -->
 
   <div class="container">
     <%= week_calendar number_of_weeks: 2, events: @requests, attribute: :formatted_start, end_attribute: :formatted_end do |date, request| %>
@@ -18,11 +18,10 @@
         <% request.each do |r| %>
             <%= link_to request_path(r), "data-toggle" => "modal", "data-target" => "#request-modal-#{r.id}" do %>
               <div class="event-tag">
-                  <%= r.start_time.strftime("%l:%M -")%>
-                  <%= r.end_time && r.end_time.strftime("%l:%M") %>
+                  <%= r.start_time.strftime("%l:%M %p")%>
+                  <%= r.end_time && r.end_time.strftime(" - %l:%M %p") %>
               </div>
             <% end %>
-            <!-- Modal -->
             <div class="modal fade" id="request-modal-<%= r.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
