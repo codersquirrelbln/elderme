@@ -26,7 +26,7 @@ initSweetalert('#sweet-alert', {
 
 initSweetalert('#sweet-alert-save', {
   title: "Wonderful!",
-  html: `Your request has been updated`,
+  html: `Your request has been sent!`,
   icon: "success",
   showConfirmButton: true,
   }, (value) => {

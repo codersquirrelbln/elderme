@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_09_04_171403) do
     t.integer "age"
     t.boolean "mobility"
     t.text "biography"
-    t.boolean "senior"
+    t.boolean "senior", default: true
     t.string "picture"
     t.string "video"
     t.integer "review"

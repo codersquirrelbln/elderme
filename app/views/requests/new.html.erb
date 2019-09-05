@@ -1,80 +1,28 @@
-<style>
-  .container {
-   width: 50%;
-   height:500px;
-  }
 
-  .butu {
-    display: flex;
-    justify-content: center;
-  }
+<div class="requests_new_wrap">
 
-  #back {
-    margin-top: 60px;
-    width: 150px;
-    height: 31px;
-  }
-
-  .form-group {
-    display: inline-block;
-  }
-
-  #sweet-alert {
-    width: 300px;
-    height: 60px;
-  }
-
- a {
-    width: 100px;
-    height: 50px;
-    padding: 25px;
-    margin-left: 31px;
-    color: #48ACF0;
-    font-weight: bold;
-  }
-
-   a:hover {
-    color: #EB9486;
-  }
-
-  label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    color: black;
-    font-size: 25px;
-  }
-
-  .h2 {
-    text-align: center;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    font-weight: bold;
-}
-
-</style>
-<%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary', id: 'back'%>
-<h2 class="h2">Message  <%= @volunteer.first_name %> </h2>
-<div class="container">
-<%= simple_form_for [@volunteer, @request] do |f| %>
-  <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"}, placeholder: 'September 01, 2019' %>
-
+    <h2 class="message-title"> Message <%= @volunteer.first_name %> </h2>
+    <%= simple_form_for [@volunteer, @request] do |f| %>
     <div class="form-group">
-   <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"}, placeholder: '10.00'%>
-   <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"}, placeholder: '19.00' %>
- </div>
+    <%= f.input :date, as: :string, required: false, wrapper_html: {class: "requests_input"}, input_html: {class: "datepicker"}, placeholder: 'September 01, 2019' %>
 
-    <label style="font-size: 23px">Meeting Point</label>
+     <%= f.input :start_time, as: :string, required: false, wrapper_html: {class: "requests_input"}, input_html: {class: "timepicker"}, placeholder: '10.00'%>
+     <%= f.input :end_time, as: :string, required: false, wrapper_html: {class: "requests_input"}, input_html: {class: "timepicker"}, placeholder: '19.00' %>
+   </div>
 
-  <%= f.text_field :meeting_point, placeholder: "Zoo Berlin " %>
-  <label style="font-size: 23px">Message</label>
-  <%= f.text_field :message, placeholder: "New Message" %>
+   <label style="font-size: 23px">Meeting Point</label>
 
-  <div class="butu">
-  <%= f.submit "Sent Message", id: 'sweet-alert', class: 'btn btn-primary new-request' %>
-  <%= f.submit "Create hidden", class: 'btn btn-primary alert new-request d-none' %>
-  <%= link_to "Cancel", profile_path(@volunteer), id:'Cancel'%>
-<% end %>
+   <%= f.text_field :meeting_point, placeholder: "Cafe Kranzler", style: "font-style: italic;" %>
+   <label style="font-size: 23px">Message</label>
+   <%= f.text_field :message, placeholder: "Hello, I look forward meeting you.", style: "font-style: italic;"%>
+
+    <div class="butu d-flex justify-content-around align-items-baseline">
+      <%= f.submit "Send Message", id: 'sweet-alert-save', class: 'btn btn-primary new-request button-action' %>
+      <%= link_to "Cancel", profile_path(@volunteer), id:'Cancel'%>
+      <%= f.submit "Create hidden", class: 'btn btn-primary alert new-request d-none' %>
+    </div>
+    <% end %>
+
+
 </div>
-</div>
-
 

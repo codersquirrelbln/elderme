@@ -1,16 +1,22 @@
 .simple-calendar {
   a {
-    font-size: 35px;
+    font-size: 1.5rem;
     color: #48ACF0;
   }
 
   .event-tag {
     color: #48ACF0;
-    font-size: 25px;
+    font-size: 1.5rem;
   }
 
   .calendar-title {
     font-size: 35px;
+  }
+
+  .calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   table {
