@@ -1,23 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# require 'faker'
-
-#User.destroy_all
-# p "destroying all users"
-#Interest.destroy_all
-
-# interests = ["Cinema", "Theatre", "Eating", "Tea Time", "Playing", "Outdoors"]
-# interests.each do |i|
-#   Interest.create(title:i)
-# end
-
-
-
 UserInterest.destroy_all
 Request.destroy_all
 Interest.destroy_all
@@ -31,7 +11,6 @@ playing = Interest.create(title: "Playing")
 outdoors = Interest.create(title: "Outdoors")
 
 
-
 volunteer1 = User.create(
   first_name: "Elisa",
   last_name: "Burghard",
@@ -40,7 +19,9 @@ volunteer1 = User.create(
   age: 35,
   gender: "female",
   biography: "I love listening to classical music, going to the theater and drink tea.",
-  picture: "elisa_burghard_weq8mq"
+  picture: "elisa_burghard_weq8mq",
+  video: "",
+  review:
   )
 volunteer1.interests = [outdoors, tea_time]
 volunteer1.save
