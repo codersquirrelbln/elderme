@@ -8,10 +8,14 @@ body.home-wrapper-2 {
   background-repeat: no-repeat;
 }
 
-//body.home-wrapper-3 {
-//  background-image: url("https://res.cloudinary.com/dmuxhwwrg/image/upload/c_scale,h_266,q_88/v1567678878/wave-bottom-search.png");
- // background-repeat: no-repeat;
-//}
+.home-wrapper-3 {
+  background-image: url("https://res.cloudinary.com/dmuxhwwrg/image/upload/c_scale,h_266,q_88/v1567678878/wave-bottom-search.png");
+  background-repeat: no-repeat;
+  height: 540px;
+  //background-position: bottom;
+  background-position-y: 215px;
+  background-size: cover;
+}
 
 //body.home-wrapper-4 {
  // background-image: url("https://res.cloudinary.com/dmuxhwwrg/image/upload/c_scale,h_360,w_1440/v1567000429/wave_home.png");

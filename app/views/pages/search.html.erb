@@ -1,38 +1,23 @@
-<body class ="home-wrapper-3">
-
 <h1>Pick your interests!</h1>
-<% @interests %>
-<div class ="index-wrapper-1">
-   <div class="container">
-    <div class="row circle-activities-container">
-      <div class="col-sm-12 col-md-4 col-lg-12">
-  <%= form_tag profiles_path, method: :get do %>
-   <% @interests.each do |interest| %>
-    <label class="circle-activities">
-        <% asset_url = "#{interest.title}.svg"%>
-        <%= image_tag(asset_url, width: 85, height:85) %>
-
-        <p><%= interest.title %></p>
-
-      <%= check_box_tag('interests[]', interest.id, checked=false, hidden:true, class:"check-me") %>
-    </label>
-  <% end %>
-  <%#= collection_select :title, :id, Interest.all, :id, :title %>
-  <%= submit_tag "Search", class: 'btn btn-primary button-action', id: "start-button" %>
-<% end %>
-<!--
-        <div class="activities-tile">
-          <i class="fas fa-film fa-5x circle-icon fa-border" id="pastille-cine"></i>Cinema
-          <i class="fas fa-theater-masks fa-5x circle-icon fa-border" id="pastille-theatre"></i>Theatre
-          <i class="fas fa-utensils fa-5x fa-border circle-icon"></i>Eating
-          <i class="fas fa-mug-hot fa-5x circle-icon fa-border"></i>Tea Time
-          <i class="fas fa-dice fa-5x circle-icon fa-border"></i>Playing
-          <i class="fas fa-walking fa-5x circle-icon fa-border"></i>Outdoors
+  <% @interests %>
+  <div class ="index-wrapper-1 home-wrapper-3">
+     <div class="container">
+      <div class="row circle-activities-container">
+        <div class="col-sm-12 col-md-4 col-lg-12">
+          <%= form_tag profiles_path, method: :get do %>
+          <% @interests.each do |interest| %>
+          <label class="circle-activities">
+          <% asset_url = "#{interest.title}.svg"%>
+          <%= image_tag(asset_url, width: 85, height:85) %>
+          <p><%= interest.title %></p>
+          <%= check_box_tag('interests[]', interest.id, checked=false, hidden:true, class:"check-me") %>
+        </label>
+      <% end %>
+    <%#= collection_select :title, :id, Interest.all, :id, :title %>
+    <%= submit_tag "Search", class: 'btn btn-primary button-action', id: "start-button" %>
+    <% end %>
         </div>
-      </div>
- -->
       </div>
     </div>
   </div>
-</div>
-</body>
+
