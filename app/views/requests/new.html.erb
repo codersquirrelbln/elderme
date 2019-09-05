@@ -20,8 +20,10 @@
   }
 
   #sweet-alert {
-    width: 300px;
-    height: 60px;
+    width: 200px;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
   }
 
  a {
@@ -46,14 +48,18 @@
 
   .h2 {
     text-align: center;
-    margin-top: 1px;
     margin-bottom: 1px;
     font-weight: bold;
 }
+  #new-request {
+    margin-bottom: 5px;
+  }
 
 </style>
-<%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary', id: 'back'%>
-<h2 class="h2">Message  <%= @volunteer.first_name %> </h2>
+<div class="d-flex align-items-end">
+  <%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary', id: 'back'%>
+  <h2 class="title-text h2"> Message <%= @volunteer.first_name %> </h2>
+</div>
 <div class="container">
 <%= simple_form_for [@volunteer, @request] do |f| %>
   <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"}, placeholder: 'September 01, 2019' %>
