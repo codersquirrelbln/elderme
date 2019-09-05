@@ -10,7 +10,9 @@
   }
 
   #back {
-    margin-top: 20px;
+    margin-top: 60px;
+    width: 150px;
+    height: 31px;
   }
 
   .form-group {
@@ -22,12 +24,19 @@
     height: 60px;
   }
 
-  #Cancel {
+ a {
     width: 100px;
     height: 50px;
-    padding: 10px;
-    margin-left: 305px;
+    padding: 25px;
+    margin-left: 31px;
+    color: #48ACF0;
+    font-weight: bold;
   }
+
+   a:hover {
+    color: #EB9486;
+  }
+
   label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -35,7 +44,7 @@
     font-size: 25px;
   }
 
-  .h1 {
+  .h2 {
     text-align: center;
     margin-top: 1px;
     margin-bottom: 1px;
@@ -44,29 +53,28 @@
 
 </style>
 <%= link_to "Back", profile_path(@volunteer), class: 'btn btn-primary', id: 'back'%>
-<h1 class="h1">New request (message)</h1>
+<h2 class="h2">Message  <%= @volunteer.first_name %> </h2>
 <div class="container">
 <%= simple_form_for [@volunteer, @request] do |f| %>
   <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"}, placeholder: 'September 01, 2019' %>
 
     <div class="form-group">
-   <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"}, placeholder: '00.00'%>
-   <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"}, placeholder: '23.59' %>
+   <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"}, placeholder: '10.00'%>
+   <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"}, placeholder: '19.00' %>
  </div>
 
     <label style="font-size: 23px">Meeting Point</label>
 
-  <%= f.text_field :meeting_point, placeholder: "Write your meeting point" %>
+  <%= f.text_field :meeting_point, placeholder: "Zoo Berlin " %>
   <label style="font-size: 23px">Message</label>
-  <%= f.text_field :message, placeholder: "Write your Message" %>
+  <%= f.text_field :message, placeholder: "New Message" %>
 
   <div class="butu">
   <%= f.submit "Sent Message", id: 'sweet-alert', class: 'btn btn-primary new-request' %>
   <%= f.submit "Create hidden", class: 'btn btn-primary alert new-request d-none' %>
-
+  <%= link_to "Cancel", profile_path(@volunteer), id:'Cancel'%>
 <% end %>
 </div>
-   <%= link_to "Cancel", profile_path(@volunteer), class: 'btn btn-primary', id:'Cancel'%>
 </div>
 
 
