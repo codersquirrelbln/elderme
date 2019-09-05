@@ -4,7 +4,7 @@
     <div class="meeting-details"  >
      <li> <strong>Date</strong> <%= request.date.strftime("%b %d, %Y") %> </li>
       <li> <strong>Time</strong> <%= request.start_time.strftime("%l:%M -")%>
-      <%= request.end_time.strftime("%l:%M") %> </li>
+      <%=request.end_time &&  request.end_time.strftime("%l:%M") %> </li>
       <li> <strong>Where</strong> <%= request.meeting_point %> </li>
       <li> <strong>Message</strong> <%= request.message %> </li>
       <li class="volunteer_link"><strong>With</strong>
