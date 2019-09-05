@@ -3,10 +3,10 @@
    margin-left: 20px;
    margin-right: 20px;
    width: 100%;
-   margin-top: -5px;
+   margin-top: 5px;
  }
 
- .home-wrapper-2 .card-volunteer {
+.home-wrapper-3 .card-volunteer1 {
  overflow: hidden;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
  border-radius: 15px;
@@ -19,9 +19,11 @@
  margin-left: auto;
  min-height: 653px;
  float: left;
+ min-width: 580px;
+
 }
 
-.card-volunteer h1 {
+.card-volunteer1 h1 {
  font-size: 16px;
  font-weight: bold;
  margin: 0;
@@ -84,8 +86,9 @@ h2 {
 }
 
  #send {
-   margin-top: -30px;
-   width: 300px;
+   margin-top: -10px;
+   width: 290px;
+   padding: 10px;
  }
 
   p {
@@ -104,7 +107,7 @@ h2 {
  margin-top: 7px;
  margin-right: auto;
  margin-left: auto;
- min-height: 655px;
+ min-height: 653px;
  }
 
  #back-btn {
@@ -115,6 +118,8 @@ h2 {
    display: flex;
    flex-wrap: wrap;
    margin-right: 36px;
+   margin-bottom: 13px;
+
 }
 
 .icone-card {
@@ -124,14 +129,18 @@ ul li {
   color: black;
   text-align: center;
   margin-right: 10%;
+  list-style: none;
 }
 </style>
-<div class ="home-wrapper-2">
+
+<div class ="home-wrapper-3">
+
  <div class="container-info-profile">
    <%= link_to "Back", profiles_path, class: 'btn btn-primary', id: 'back-btn'%>
    <div class="row">
      <div class="col-5">
-       <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+       <div class="card-volunteer1" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+
          <div class="photo-profile1" style="background-image: url('<%= cl_image_path(@volunteer.picture) %>')"></div>
            <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
            <ul>
@@ -139,14 +148,14 @@ ul li {
              <li><%= @volunteer.age %> Years old</li>
              <li><%= @volunteer.mobility %></li>
            </ul>
-           </ul>
                 <% @volunteer.interests.each do |interest|  %>
                 <% asset_url = "#{interest.title}.svg"%>
                   <div class="icone-card">
                     <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
                   </div>
                 <% end %>
-           <br><br><br><br>
+
+                <br><br><br><br>
            <div class="biography">
              <p>"<%= @volunteer.biography %>"</p>
            </div>
@@ -156,11 +165,11 @@ ul li {
        </div>
      </div>
      <div class="col-7" id="video-container">
-       <div style="position:relative; padding-bottom:63.25%; padding-top:30px; height:0; overflow:hidden;">
-         <iframe  width="415" height="610" src="https://www.youtube.com/embed/UArjj6dtuQM" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+       <div style=" padding-top:30px; height:634; overflow:hidden;">
+         <iframe  width="415" src="https://www.youtube.com/embed/UArjj6dtuQM" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
        </div>
      </div>
    </div>
  </div>
-</div>
+
 

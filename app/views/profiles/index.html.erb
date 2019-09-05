@@ -2,8 +2,6 @@
 <h1>Pick your volunteer !</h1>
   <div class ="home-wrapper-2">
     <div class="container">
-
-      <h3>Here, you can have a look at our volunteers and message them .</h3>
         <div class="row">
           <% @volunteers.each do |volunteer| %>
           <div class="col-12 col-sm-6 col-md-4 mb-3">
@@ -12,7 +10,6 @@
           <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
           </div>
               <h2><%= volunteer.first_name %></h2>
-              <h2><%= volunteer.last_name %></h2>
               <div class="d-flex justify-content-center">
                 <% volunteer.interests.each do |inter| %>
                 <% asset_url = "#{inter.title}.svg"%>
@@ -32,7 +29,7 @@
                 <br>
                 <br>
               <a href="" class = "volunteer_profile">
-              <%= link_to "#{volunteer.first_name}'s profile", profile_path(volunteer), class: 'btn btn-primary button-action', id:"profile-button"%>
+              <%= link_to "See profile", profile_path(volunteer), class: 'btn btn-primary button-action', id:"profile-button"%>
               </a>
              </div>
           </div>
