@@ -12,14 +12,15 @@
           <div>
             <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
             </div>
+            <h2><%= volunteer.first_name %></h2>
             <% volunteer.review.times do %>
             <i class="fas fa-star fa-2x"></i>
             <% end %>
             <% (5 - volunteer.review).times do %>
             <i class="fas fa-star fa-2x grey-star"></i>
             <% end %>
-            <h2><%= volunteer.first_name %></h2>
-            <div class="d-flex justify-content-center">
+
+            <div class="d-flex justify-content-center icones">
               <% volunteer.interests.each do |inter| %>
               <% asset_url = "#{inter.title}.svg"%>
               <div class="icone-card">
