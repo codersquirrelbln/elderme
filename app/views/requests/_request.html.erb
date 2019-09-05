@@ -1,0 +1,22 @@
+<div class="more_info request-show">
+  <h1>Meeting Details</h1>
+  <ul>
+    <div class="meeting-details"  >
+     <li> <strong>Date</strong> <%= request.date.strftime("%b %d, %Y") %> </li>
+      <li> <strong>Time</strong> <%= request.start_time.strftime("%l:%M -")%>
+      <%= request.end_time.strftime("%l:%M") %> </li>
+      <li> <strong>Where</strong> <%= request.meeting_point %> </li>
+      <li> <strong>Message</strong> <%= request.message %> </li>
+      <li class="volunteer_link"><strong>With</strong>
+        <div class ="photo-profile1" style="background-image: url('<%= cl_image_path(request.volunteer.picture) %>')"></div>
+        <a href="" class="volunteer_link meeting-details">
+          <%= link_to "#{request.volunteer.first_name} #{request.volunteer.last_name}" , profile_path(request.volunteer) %>
+        </a>
+      </li>
+    </div>
+  </ul>
+  <div class="info">
+    <%= link_to "Edit", edit_request_path(request), class: 'btn btn-primary modul'%>
+    <%= link_to "Delete", request_path(request), class: 'btn btn-primary modul', method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+</div>

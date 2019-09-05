@@ -15,8 +15,7 @@
 # interests.each do |i|
 #   Interest.create(title:i)
 # end
-User.destroy_all
-Interest.destroy_all
+
 
 
 UserInterest.destroy_all

@@ -1,13 +1,61 @@
-.info {
-  text-align: center;
+.request-show{
+  .info {
+    text-align: center;
+  }
+
+  .more_info {
+    text-align: center;
+  }
+
+  .volunteer_link {
+    text-align: center;
+  }
+
+  .modul {
+    color: white;
+  }
+
+  .meeting-details {
+    font-size: 35px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  ul {
+     li {
+      list-style: none;
+    }
+  }
+
+  .volunteer_link {
+    text-decoration: none;
+    color: #48ACF0;
+  }
+
+   .container {
+    width: 50%;
+    height: 500px;
+  }
+
+  .photo-profile1 {
+    height: 180px;
+    width: 180px;
+    margin: 0 auto;
+    background-position: center;
+    border-radius:50%;
+    border: 4px solid white;
+    background-size: cover;
+    margin-top : 20px;
+  }
 }
 
-.more_info {
-   text-align: center;
-}
-
-ul {
-   li {
-    list-style: none;
+@include media-breakpoint-up(sm) {
+  .modal-dialog{
+    max-width: 80vw !important;
   }
 }

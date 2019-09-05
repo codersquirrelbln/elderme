@@ -1,54 +1,16 @@
-<h1>Our selection of volunteers</h1>
-<% @interests %>
-<div class ="index-wrapper-1">
-   <div class="container">
-    <h3>Here, you can select one or several interests. We will make sure that your interests match with our volunteers.</h3>
-    <div class="row circle-activities-container">
-      <div class="col-sm-12 col-md-4 col-lg-12">
-  <%= form_tag profiles_path, method: :get do %>
-   <% @interests.each do |interest| %>
-    <label class="circle-activities">
-        <% asset_url = "#{interest.title}.svg"%>
-        <%= image_tag(asset_url, width: 85, height:85) %>
+<%= link_to "Back", search_path, class: 'btn btn-primary'%>
+<h1>Pick your volunteer !</h1>
+  <div class ="home-wrapper-2">
+    <div class="container">
 
-        <p><%= interest.title %></p>
-
-      <%= check_box_tag('interests[]', interest.id, checked=false, hidden:true, class:"check-me") %>
-    </label>
-  <% end %>
-  <%#= collection_select :title, :id, Interest.all, :id, :title %>
-  <%= submit_tag "Search", class: "btn btn-primary button-action-profile" %>
-<% end %>
-<!--
-        <div class="activities-tile">
-          <i class="fas fa-film fa-5x circle-icon fa-border" id="pastille-cine"></i>Cinema
-          <i class="fas fa-theater-masks fa-5x circle-icon fa-border" id="pastille-theatre"></i>Theatre
-          <i class="fas fa-utensils fa-5x fa-border circle-icon"></i>Eating
-          <i class="fas fa-mug-hot fa-5x circle-icon fa-border"></i>Tea Time
-          <i class="fas fa-dice fa-5x circle-icon fa-border"></i>Playing
-          <i class="fas fa-walking fa-5x circle-icon fa-border"></i>Outdoors
-        </div>
-      </div>
- -->
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class ="home-wrapper-2">
-
-<div class="container">
-  <div class="row">
-      <% @volunteers.each do |volunteer| %>
-    <div class="col-12 col-sm-6 col-md-4 mb-3">
-      <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
-        <div>
-        <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
-        </div>
-
+      <h3>Here, you can have a look at our volunteers and message them .</h3>
+        <div class="row">
+          <% @volunteers.each do |volunteer| %>
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+          <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+          <div>
+          <div class ="photo-profile" style="background-image: url('<%= cl_image_path(volunteer.picture) %>')">
+          </div>
               <h2><%= volunteer.first_name %></h2>
               <h2><%= volunteer.last_name %></h2>
               <div class="d-flex justify-content-center">
@@ -59,26 +21,20 @@
                   </div>
                 <% end %>
               </div>
-           <br><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i><i class="fas fa-star fa-2x"></i>
-            <div class="icones">
-
-            </div>
+                <br><i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
             <%# if volunteer.volunteer_interests.present? %>
             <%#= volunteer.title %>
             <%# end %>
-
-            <br>
-            <br>
-            <i class="fas fa-star fa-2x"></i>
-            <i class="fas fa-star fa-2x"></i>
-            <i class="fas fa-star fa-2x"></i>
-            <i class="fas fa-star fa-2x"></i>
-            <i class="fas fa-star fa-2x"></i>
-
-
-
-            <%= link_to "MY PROFILE", profile_path(volunteer), class: "btn btn-primary button-action-profile" %>
-
+                <br>
+                <br>
+              <a href="" class = "volunteer_profile">
+              <%= link_to "#{volunteer.first_name}'s profile", profile_path(volunteer), class: "btn btn-primary button-action-profile" %>
+              </a>
+             </div>
           </div>
         </div>
       <% end %>

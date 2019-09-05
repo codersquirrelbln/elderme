@@ -1,8 +1,5 @@
 class ProfilesController < ApplicationController
-
   def index
-    @interests = Interest.all
-
     if params[:interests].present?
       @volunteers = User.where(senior: false).includes(user_interests: :interest).where(interests: { id: params[:interests]})
       # users = User.all
@@ -11,6 +8,7 @@ class ProfilesController < ApplicationController
       #     @users = User.where(title: params[:query])
       #   end
       # end
+
 
     else
       @volunteers = User.where(senior: false)
