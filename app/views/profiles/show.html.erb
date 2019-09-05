@@ -126,12 +126,13 @@ ul li {
   margin-right: 10%;
 }
 </style>
+
 <div class ="home-wrapper-2">
  <div class="container-info-profile">
    <%= link_to "Back", profiles_path, class: 'btn btn-primary', id: 'back-btn'%>
    <div class="row">
      <div class="col-5">
-       <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
+       <div class="card-volunteer" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>')">
          <div class="photo-profile1" style="background-image: url('<%= cl_image_path(@volunteer.picture) %>')"></div>
            <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
            <ul>
@@ -139,14 +140,14 @@ ul li {
              <li><%= @volunteer.age %> Years old</li>
              <li><%= @volunteer.mobility %></li>
            </ul>
-           </ul>
                 <% @volunteer.interests.each do |interest|  %>
                 <% asset_url = "#{interest.title}.svg"%>
                   <div class="icone-card">
                     <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
                   </div>
                 <% end %>
-           <br><br><br><br>
+
+                <br><br><br><br>
            <div class="biography">
              <p>"<%= @volunteer.biography %>"</p>
            </div>
@@ -162,5 +163,5 @@ ul li {
      </div>
    </div>
  </div>
-</div>
+
 
