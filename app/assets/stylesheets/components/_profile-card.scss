@@ -1,0 +1,69 @@
+.card-volunteer1 {
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 5px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-volunteer1 .photo-profile1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 40px;
+}
+
+.card-volunteer1 .volunteer-info {
+  text-align: center;
+}
+
+.card-volunteer1 .volunteer-info h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.card-volunteer1 .volunteer-info .age {
+  font-weight: bold !important;
+  font-size: 20px;
+}
+
+.card-volunteer1 .interests-wrapper {
+  margin-top: -30px;
+}
+
+.card-volunteer1 .review-wrapper .fa-star {
+  color: #EB9486;
+}
+
+.card-volunteer1 #send {
+  padding-top: 8px;
+}
+
+.card-volunteer1 .biography {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-volunteer1 .send-wrapper {
+  margin-top: -30px !important;
+}
+
+.show-wrapper #back-btn {
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-wrapper #video-container {
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

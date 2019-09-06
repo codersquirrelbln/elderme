@@ -1,205 +1,51 @@
-<style>
- .container-info-profile {
-   margin: 0 auto;
-   width: 90%;
- }
+<div class="show-wrapper mx-5 mb-4">
+   <%= link_to "Back", profiles_path, class: 'btn btn-primary button-action mb-3', id: 'back-btn'%>
 
-.home-wrapper-3 .card-volunteer1 {
- overflow: hidden;
- box-shadow: 0 0 4px rgba(0,0,0,0.1);
- border-radius: 12px;
- padding: 5px;
- text-align: center;
- background-repeat: no-repeat !important;
- background-size: cover;
- margin-top: 7px;
- margin-right: auto;
- margin-left: auto;
- min-height: 653px;
- float: left;
- min-width: 505px;
-}
-
-.card-volunteer1 h1 {
- font-size: 16px;
- font-weight: bold;
- margin: 0;
-}
-
-.age {
-  margin-right: 43px;
-  font-weight: bold;
-}
-
-.fas.fa-star{
-  color: #EB9486;
-  margin-right: 47px;
-}
-
-.photo-profile1 {
- height: 200px;
- width: 200px;
- margin: 0 auto;
- background-position: center;
- border-radius:50%;
- border: 4px solid white;
- background-size: cover;
- margin-top : 40px;
-}
-
-.photo-profile1 img {
- z-index:1;
-}
-
-.background img {
- z-index:0;
-}
-
-h2 {
- font-size: 25px;
- font-weight: bold;
- margin-top: 10px;
- color: black;
-}
-
-.fas.fa-dice {
- margin-top: 50px;
- border-radius : 500px;
- border: 3px solid black;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- margin-right: 15px;
-}
-
-.fas.fa-utensils {
- margin-top: 50px;
- border-radius : 500px;
- border: 3px solid black;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- margin-right: 15px;
-}
-
-.fas.fa-theater-masks {
- margin-top: 50px;
- border-radius : 500px;
- border: 3px solid black;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- margin-right: 15px;
-}
-
-.icones {
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
- #send {
-   margin-top: -45px;
-   width: 290px;
-   padding: 10px;
- }
-
-  p {
-   list-style: none;
-   color: black;
- }
-
- #video-container {
- overflow: hidden;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- border-radius: 15px;
- padding: 10px;
- text-align: center;
- background-repeat: no-repeat !important;
- background-size: cover;
- margin-top: 7px;
- margin-right: auto;
- margin-left: auto;
- min-height: 653px;
- }
-
- #back-btn {
-   /*margin-top: 30px;*/
-   height: 39px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
-
- .row {
-   display: flex;
-   flex-wrap: wrap;
-   margin-bottom: 13px;
-   width: 100%;
-}
-
-.icone-card {
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-ul li {
-  color: black;
-  text-align: center;
-  list-style: none;
-}
-
-  .biography {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: -75px;
-  }
-
-  .no-video {
-    margin-top: 85px;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-</style>
-
-<div class ="home-wrapper-3">
-
- <div class="container-info-profile">
-   <%= link_to "Back", profiles_path, class: 'btn btn-primary button-action', id: 'back-btn'%>
    <div class="row">
+
      <div class="col-5">
-       <div class="card-volunteer1" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
 
-         <div class="photo-profile1" style="background-image: url('<%= cl_image_path(@volunteer.picture) %>')"></div>
-           <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
-           <ul>
-             <li><%= @volunteer.city %></li>
-             <li class="age"><%= @volunteer.age %> Years </li>
-             <li><%= @volunteer.mobility %></li>
-           </ul>
-                <% @volunteer.interests.each do |interest|  %>
-                <% asset_url = "#{interest.title}.svg"%>
-                  <div class="icone-card">
-                    <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
-                  </div>
-                <% end %>
-              <ul>
-                <li ><% (@volunteer.review).times do %>
-                  <i class="fas fa-star fa-2x"></i>
-                  <% end %>
-                  <% (5 - @volunteer.review).times do %>
-                    <i class="fas fa-star fa-2x grey-star"></i>
-                  <% end %>
-                </li>
-              </ul>
+      <div class="card-volunteer1" style="background-image: url('<%= cl_image_path("shape-card-volunteer")%>');">
 
-                <br><br><br><br>
-           <div class="biography">
-             <p>"<%= @volunteer.biography %>"</p>
+        <div class="d-flex w-100 justify-content-center">
+          <%= cl_image_tag @volunteer.picture, class: "photo-profile1" %>
+        </div>
+
+        <div class="volunteer-info mt-3">
+          <h2><%= @volunteer.first_name %>  <%= @volunteer.last_name %></h2>
+          <p class="age"><%= @volunteer.age %> Years </p>
+        </div>
+
+       <div class="d-flex justify-content-center interests-wrapper">
+        <% @volunteer.interests.each do |interest|  %>
+         <% asset_url = "#{interest.title}.svg"%>
+           <div class="icone-card">
+             <%= image_tag(asset_url, width: 25, height:25, class: "")  %>
            </div>
-
-         <div class="send">
-        <%= link_to "Send message", new_user_request_path(@volunteer), class: 'btn btn-primary button-action', id: 'send' %>
-         </div>
+         <% end %>
        </div>
+
+        <div class="review-wrapper d-flex justify-content-center my-4">
+          <% (@volunteer.review).times do %>
+            <i class="fas fa-star fa-2x mr-3"></i>
+          <% end %>
+          <% (5 - @volunteer.review).times do %>
+            <i class="fas fa-star fa-2x mr-3 grey-star"></i>
+          <% end %>
+        </div>
+
+        <div class="biography">
+          <p>"<%= @volunteer.biography %>"</p>
+        </div>
+
+        <div class="send d-flex justify-content-center send-wrapper">
+          <%= link_to "Send message", new_user_request_path(@volunteer), class: 'btn btn-primary button-action', id: 'send' %>
+        </div>
+
+      </div>
+
      </div>
+
      <div class="col-7" id="video-container">
       <%  if @volunteer.video == "" %>
         <img src="https://res.cloudinary.com/dmuxhwwrg/image/upload/v1567690581/no_video_d6vhyn.jpg" alt="no-signal-available" class="no-video">
@@ -210,7 +56,6 @@ ul li {
         </div>
       <% end %>
      </div>
+
    </div>
- </div>
-
-
+</div>
