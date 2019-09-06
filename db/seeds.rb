@@ -53,7 +53,8 @@ volunteer3 = User.create(
   biography: "I love sitting in the park and watch birds, or play table games like Mahjongg or chess.",
   picture: "camille_de_peretti_nkgd9a",
   senior: false,
-  video: "https://www.youtube.com/embed/UArjj6dtuQM",
+  # video: "https://www.youtube.com/embed/UArjj6dtuQM",
+  video: "https://www.youtube.com/embed/ESYna3lwvjY",
   review: 5
   )
 volunteer3.interests = [outdoors, tea_time, eating]
