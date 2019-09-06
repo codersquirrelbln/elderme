@@ -1,0 +1,5 @@
+meta_product_name: "elderme"
+meta_title: "Elderme - Live life to the fullest"
+meta_description: "Connect Seniors with Volunteers"
+meta_image: "logo v8.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
