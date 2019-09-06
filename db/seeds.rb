@@ -85,7 +85,7 @@ volunteer5 = User.create(
   biography: "I love cooking and going to the theater or the movies.",
   picture: "yann_parent_j8st2c",
   senior: false,
-  video: "",
+  video: "https://www.youtube.com/embed/5iNZKf3LwHk",
   review: 5
   )
 volunteer5.interests = [cinema, tea_time]

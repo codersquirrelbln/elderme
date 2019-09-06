@@ -10,13 +10,15 @@
   background-repeat: no-repeat !important;
   height:500px;
   // width:250px;
+  background: white;
   background-size: cover;
+  z-index: 10;
 }
 
 .card-volunteer:hover{
 
     box-shadow: 0 0 100px rgba(0,0,0,.2);
-    background: rgba(0,0,0,0);
+    // background: rgba(0,0,0,0);
     color: #EB9486;
     background-size: cover;
 }
