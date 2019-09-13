@@ -9,8 +9,6 @@ class ProfilesController < ApplicationController
       #     @users = User.where(title: params[:query])
       #   end
       # end
-
-
     else
       @volunteers = User.where(senior: false)
     end

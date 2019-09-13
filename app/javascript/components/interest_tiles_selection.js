@@ -1,6 +1,4 @@
-
 function checked(i){
-
   this.classList.toggle("active");
   const label = this.parentElement
   console.log(label)
@@ -16,4 +14,3 @@ function checked(i){
 
 const filters = document.querySelectorAll('.check-me');
 filters.forEach(filter => filter.addEventListener('click', checked))
-
