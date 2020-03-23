@@ -33,19 +33,19 @@ Ruby on Rails
 ruby '2.6.3'\
 gem 'rails', '5.2.3'\
 gem "devise", '>= 4.7.1'\
-gem 'jbuilder', '~> 2.0'\
-gem 'pg', '~> 0.21'\
+gem 'jbuilder', '>= 2.0'\
+gem 'pg', '>= 0.21'\
 gem 'puma'\
 gem 'redis'\
 gem 'autoprefixer-rails'\
-gem 'font-awesome-sass', '~> 5.6.1'\
+gem 'font-awesome-sass', '>= 5.6.1'\
 gem 'sassc-rails'\
 gem 'simple_form'\
 gem 'uglifier'\
 gem 'webpacker'\
-gem 'cloudinary', '~> 1.9.1'\
+gem 'cloudinary', '>= 1.9.1'\
 gem 'pundit'\
-<!-- gem 'simple_calendar', '~> 2.0'\ -->
+gem 'simple_calendar', '>= 2.0'\
 gem 'flatpickr', '4.6.3'
 
 
