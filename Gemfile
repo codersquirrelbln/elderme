@@ -7,7 +7,7 @@ gem "devise", ">= 4.7.1"
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
-gem 'rails', '5.2.3'
+gem 'rails', '5.2.4.3'
 gem 'redis'
 gem 'faker'
 
@@ -20,6 +20,8 @@ gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
 gem "simple_calendar", "~> 2.0"
+
+gem "activesupport", ">= 5.2.4.3"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
